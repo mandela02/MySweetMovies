@@ -9,11 +9,11 @@ import Foundation
 import Platform
 
 public struct Movies {
-    let page: Int
-    let totalPage: Int
-    let totalResult: Int
-    
-    let movies: [Movie]
+    public let page: Int
+    public let totalPage: Int
+    public let totalResult: Int
+     
+    public let movies: [Movie]
 }
 
 public struct Movie: Identifiable {

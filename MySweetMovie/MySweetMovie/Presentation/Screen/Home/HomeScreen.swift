@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 import SwiftUIExtension
+import UnderlyingViewForSwiftUI
+import Domain
 
 struct HomeScreen: View {
     @StateObject
@@ -16,6 +18,8 @@ struct HomeScreen: View {
     var body: some View {
         VStack {
             header
+            gridView
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
             .viewDidLoad(initState: {
                 await viewModel.fetchDataFromApi()
@@ -38,5 +42,86 @@ extension HomeScreen {
             IconButton(icon: .magnifyingglass, action: {})
                 .foregroundColor(.white)
         }
+    }
+    
+    private var gridView: some View {
+        UnderlyingCollectionView(data: viewModel.state.sections,
+                                 calculateSizeForCell: { (_, _)  in .zero},
+                                 buildCellForItem: { collectionView, indexPath in
+            let section = viewModel.state.sections[indexPath.section]
+            let data = section.data[indexPath.item]
+            
+            switch section.type {
+            case .big:
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigMovieCollectionViewCell.className,
+                                                                    for: indexPath) as? BigMovieCollectionViewCell,
+                      let movie = data as? SingleCell<Movie> else {
+                    return UICollectionViewCell()
+                }
+
+                cell.setup(movie: movie.model)
+                return cell
+            case .small:
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallMovieCollectionViewCell.className,
+                                                                    for: indexPath) as? SmallMovieCollectionViewCell,
+                      let movie = data as? SingleCell<Movie> else {
+                    return UICollectionViewCell()
+                }
+
+                cell.setup(movie: movie.model)
+                return cell
+            }
+
+        },
+                                 extraSetting: { collectionView in
+            collectionView.collectionViewLayout = buildCompositeLayout()
+            collectionView.backgroundColor = .clear
+            
+            collectionView.register(BigMovieCollectionViewCell.self,
+                                    forCellWithReuseIdentifier: BigMovieCollectionViewCell.className)
+            collectionView.register(SmallMovieCollectionViewCell.self,
+                                    forCellWithReuseIdentifier: SmallMovieCollectionViewCell.className)
+        })
+    }
+}
+
+extension HomeScreen {
+    private func buildCompositeLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (section: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            guard let section = viewModel.state.sections[safe: section] else {
+                return LayoutBuilder.defaultVertical()
+            }
+            
+            var layoutSection: NSCollectionLayoutSection?
+            
+            switch section.type {
+            case .big:
+                let width = (environment.container.contentSize.width - 20 * 2) - 50
+
+                layoutSection = LayoutBuilder.buildHorizontalScrollSectionLayout(itemSize: .init(widthDimension: .fractionalWidth(1),
+                                                                                                 heightDimension: .fractionalHeight(1)),
+                                                                                 layoutSize: .init(widthDimension: .absolute(width),
+                                                                                                   heightDimension: .absolute(width * 9 / 16)))
+            case .small:
+                let width = (environment.container.contentSize.width - 20 * 2 - 20) / 2 - 30
+                layoutSection = LayoutBuilder.buildHorizontalScrollSectionLayout(itemSize: .init(widthDimension: .fractionalWidth(1),
+                                                                                                 heightDimension: .fractionalHeight(1)),
+                                                                                 layoutSize: .init(widthDimension: .absolute(width),
+                                                                                                   heightDimension: .absolute(width * 3 / 2)))
+            }
+            
+            if !section.title.isEmpty {
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                        heightDimension: .estimated(20))
+                let header = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: headerSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .topLeading)
+                layoutSection?.boundarySupplementaryItems = [header]
+            }
+            return layoutSection
+        }
+        
+        return layout
     }
 }

@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke.git",
+      "state" : {
+        "revision" : "67bd45931180f652159e3342575277a7f197b3ab",
+        "version" : "11.6.2"
+      }
+    },
+    {
       "identity" : "swiftuiextension",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mandela02/SwiftUIExtension.git",
@@ -41,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mandela02/UnderlyingViewForSwiftUI.git",
       "state" : {
-        "revision" : "9496c57e2f84831a41617b4b594204b07cbbda46",
-        "version" : "2.1.0"
+        "revision" : "e1a756af865748ed9ab91fc9f24bc06017a9402d",
+        "version" : "3.0.0"
       }
     }
   ],
