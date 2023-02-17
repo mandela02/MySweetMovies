@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TemplateForSwiftUI
+
+  Created by Tri Bui Q. VN.Hanoi on 14/12/2022.
+  
+*/
+
+"helloWorld" = "Hello World";
+"locked" = "Locked";
+"scanFaceID" = "Scan faceID to open";
+

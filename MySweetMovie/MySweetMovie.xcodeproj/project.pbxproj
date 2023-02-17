@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		A46A654B299F2D510013FE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A654A299F2D510013FE1C /* AppDelegate.swift */; };
 		A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A654C299F2D510013FE1C /* SceneDelegate.swift */; };
-		A46A654F299F2D510013FE1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A654E299F2D510013FE1C /* ViewController.swift */; };
-		A46A6552299F2D510013FE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46A6550299F2D510013FE1C /* Main.storyboard */; };
 		A46A6554299F2D530013FE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46A6553299F2D530013FE1C /* Assets.xcassets */; };
 		A46A6557299F2D530013FE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46A6555299F2D530013FE1C /* LaunchScreen.storyboard */; };
 		A46A6562299F2D530013FE1C /* MySweetMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6561299F2D530013FE1C /* MySweetMovieTests.swift */; };
@@ -38,6 +36,7 @@
 		A46A65B1299F30240013FE1C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65AF299F30240013FE1C /* Application.swift */; };
 		A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B2299F30540013FE1C /* OnBoardingView.swift */; };
 		A46A65B8299F30B60013FE1C /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B7299F30B60013FE1C /* LockView.swift */; };
+		A46A65DB299F33F00013FE1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46A65DD299F33F00013FE1C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +75,6 @@
 		A46A6547299F2D510013FE1C /* MySweetMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySweetMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A654A299F2D510013FE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A46A654C299F2D510013FE1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A46A654E299F2D510013FE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A46A6551299F2D510013FE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A46A6553299F2D530013FE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A46A6556299F2D530013FE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A46A6558299F2D530013FE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +100,9 @@
 		A46A65AF299F30240013FE1C /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		A46A65B2299F30540013FE1C /* OnBoardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		A46A65B7299F30B60013FE1C /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		A46A65DA299F33E00013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A46A65DC299F33F00013FE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A46A65DE299F33F30013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,14 +159,11 @@
 		A46A6549299F2D510013FE1C /* MySweetMovie */ = {
 			isa = PBXGroup;
 			children = (
+				A46A65D6299F32700013FE1C /* Presentation */,
 				A46A6596299F2F9C0013FE1C /* Utilities */,
 				A46A658D299F2ED40013FE1C /* App */,
 				A46A6594299F2F670013FE1C /* Resource */,
 				A46A658F299F2F470013FE1C /* Base */,
-				A46A65B5299F30B60013FE1C /* View */,
-				A46A658B299F2EAA0013FE1C /* Screen */,
-				A46A654E299F2D510013FE1C /* ViewController.swift */,
-				A46A6550299F2D510013FE1C /* Main.storyboard */,
 			);
 			path = MySweetMovie;
 			sourceTree = "<group>";
@@ -246,6 +243,7 @@
 		A46A6594299F2F670013FE1C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A46A65D7299F32880013FE1C /* Language */,
 				A46A6595299F2F6E0013FE1C /* Image */,
 			);
 			path = Resource;
@@ -337,6 +335,23 @@
 				A46A65B7299F30B60013FE1C /* LockView.swift */,
 			);
 			path = LockView;
+			sourceTree = "<group>";
+		};
+		A46A65D6299F32700013FE1C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65B5299F30B60013FE1C /* View */,
+				A46A658B299F2EAA0013FE1C /* Screen */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A46A65D7299F32880013FE1C /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65DD299F33F00013FE1C /* Localizable.strings */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +446,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = A46A653E299F2D510013FE1C;
 			packageReferences = (
@@ -455,8 +471,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46A6557299F2D530013FE1C /* LaunchScreen.storyboard in Resources */,
+				A46A65DB299F33F00013FE1C /* Localizable.strings in Resources */,
 				A46A6554299F2D530013FE1C /* Assets.xcassets in Resources */,
-				A46A6552299F2D510013FE1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +504,6 @@
 				A46A65A9299F2FD70013FE1C /* InternetManager.swift in Sources */,
 				A46A65B8299F30B60013FE1C /* LockView.swift in Sources */,
 				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
-				A46A654F299F2D510013FE1C /* ViewController.swift in Sources */,
 				A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */,
 				A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */,
 				A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */,
@@ -535,20 +550,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A46A6550299F2D510013FE1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A46A6551299F2D510013FE1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A46A6555299F2D530013FE1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A46A6556299F2D530013FE1C /* Base */,
+				A46A65DA299F33E00013FE1C /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A46A65DD299F33F00013FE1C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46A65DC299F33F00013FE1C /* en */,
+				A46A65DE299F33F30013FE1C /* vi */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -558,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -618,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -680,7 +699,6 @@
 				INFOPLIST_FILE = MySweetMovie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -708,7 +726,6 @@
 				INFOPLIST_FILE = MySweetMovie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
