@@ -76,4 +76,5 @@ extension String {
     static var vietnamese: String { String(localizedKey: "vietnamese") }
     static var error: String { String(localizedKey: "error") }
     static var cancel: String { String(localizedKey: "cancel") }
+    static var home: String { String(localizedKey: "home") }
 }

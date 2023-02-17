@@ -13,6 +13,7 @@ extension Image {
     static let movieAndSpeaker = "tv.and.hifispeaker.fill".systemImage
     static let splashBackdrop = "splashBackdrop".image
     static let arrowCounterclockwise = "arrow.counterclockwise".systemImage
+    static let magnifyingglass = "magnifyingglass".systemImage
 
     static let error = "error".image
     static let warning = "warning".image
