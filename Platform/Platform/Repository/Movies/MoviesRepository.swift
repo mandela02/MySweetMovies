@@ -27,4 +27,20 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         let result = try await dataRepository.fetchItem(path: .upcommingPath, param: param, needAuthToken: false)
         return try result.getData()
     }
+    
+    public func getPopular(language: String, page: Int) async throws -> MoviesEntity {
+        var param = baseParam
+        param["language"] = language
+        param["page"] = "\(page)"
+        let result = try await dataRepository.fetchItem(path: .popularPath, param: param, needAuthToken: false)
+        return try result.getData()
+    }
+    
+    public func getTopRated(language: String, page: Int) async throws -> MoviesEntity {
+        var param = baseParam
+        param["language"] = language
+        param["page"] = "\(page)"
+        let result = try await dataRepository.fetchItem(path: .topRatedPath, param: param, needAuthToken: false)
+        return try result.getData()
+    }
 }

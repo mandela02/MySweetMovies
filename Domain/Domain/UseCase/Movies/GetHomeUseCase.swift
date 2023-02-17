@@ -21,10 +21,14 @@ public struct GetHomeUseCase: InputOutputUseCaseProtocol {
     public func run(input: String) async throws -> HomeData {
         async let nowPlaying = moviesRepository.getNowPlaying(language: input, page: 1)
         async let upcomming = moviesRepository.getUpcomming(language: input, page: 1)
+        async let getPopular = moviesRepository.getPopular(language: input, page: 1)
+        async let getTopRated = moviesRepository.getTopRated(language: input, page: 1)
         
-        let result = try await (nowPlaying, upcomming)
+        let result = try await (nowPlaying, upcomming, getPopular, getTopRated)
         
         return HomeData(upcoming: result.1.results?.map { $0.toModel } ?? [],
-                        nowPlaying: result.0.results?.map { $0.toModel } ?? [])
+                        nowPlaying: result.0.results?.map { $0.toModel } ?? [],
+                        popular: result.2.results?.map { $0.toModel } ?? [],
+                        topRated: result.3.results?.map { $0.toModel } ?? [])
     }
 }

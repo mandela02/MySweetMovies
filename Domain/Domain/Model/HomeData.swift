@@ -10,4 +10,6 @@ import Foundation
 public struct HomeData {
     public let upcoming: [Movie]
     public let nowPlaying: [Movie]
+    public let popular: [Movie]
+    public let topRated: [Movie]
 }

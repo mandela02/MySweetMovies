@@ -27,8 +27,10 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
             
             let upcoming = Section(title: "", data: result.upcoming.map { SingleCell(model: $0) }, type: .big)
             let nowPlaying = Section(title: .nowPlaying, data: result.nowPlaying.map { SingleCell(model: $0) }, type: .small)
+            let popular = Section(title: .trending, data: result.popular.map { SingleCell(model: $0) }, type: .small)
+            let topRated = Section(title: .topRated, data: result.topRated.map { SingleCell(model: $0) }, type: .small)
             
-            state.sections = [upcoming, nowPlaying]
+            state.sections = [upcoming, nowPlaying, popular, topRated]
         } catch {
             self.state.loadingStatus = .error(error.localizedDescription)
         }
