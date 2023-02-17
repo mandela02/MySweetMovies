@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A46A64A0299F27D00013FE1C /* Platform.docc in Sources */ = {isa = PBXBuildFile; fileRef = A46A649F299F27D00013FE1C /* Platform.docc */; };
 		A46A64A1299F27D00013FE1C /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = A46A649E299F27D00013FE1C /* Platform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A46A64F1299F29B10013FE1C /* CoreApiConcurrency in Frameworks */ = {isa = PBXBuildFile; productRef = A46A64F0299F29B10013FE1C /* CoreApiConcurrency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A64F1299F29B10013FE1C /* CoreApiConcurrency in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +83,9 @@
 			dependencies = (
 			);
 			name = Platform;
+			packageProductDependencies = (
+				A46A64F0299F29B10013FE1C /* CoreApiConcurrency */,
+			);
 			productName = Platform;
 			productReference = A46A649B299F27D00013FE1C /* Platform.framework */;
 			productType = "com.apple.product-type.framework";
@@ -108,6 +113,9 @@
 				Base,
 			);
 			mainGroup = A46A6491299F27D00013FE1C;
+			packageReferences = (
+				A46A64EF299F29B10013FE1C /* XCRemoteSwiftPackageReference "CoreApiConcurrency" */,
+			);
 			productRefGroup = A46A649C299F27D00013FE1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -190,7 +198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -247,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -337,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A46A64EF299F29B10013FE1C /* XCRemoteSwiftPackageReference "CoreApiConcurrency" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mandela02/CoreApiConcurrency.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A46A64F0299F29B10013FE1C /* CoreApiConcurrency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A46A64EF299F29B10013FE1C /* XCRemoteSwiftPackageReference "CoreApiConcurrency" */;
+			productName = CoreApiConcurrency;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A46A6492299F27D00013FE1C /* Project object */;
 }

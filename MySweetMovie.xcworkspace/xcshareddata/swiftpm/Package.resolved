@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
+        "version" : "5.6.4"
+      }
+    },
+    {
+      "identity" : "coreapiconcurrency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mandela02/CoreApiConcurrency.git",
+      "state" : {
+        "revision" : "629515297b822f3fddfc3e86c606a9ceb3b6ca85",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftuiextension",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mandela02/SwiftUIExtension.git",
+      "state" : {
+        "revision" : "9f3ba9b1464833e28a23249820e10468b2009360",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftutilities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mandela02/SwiftUtilities.git",
+      "state" : {
+        "revision" : "02994a7ee1b4854e00e82d6699b1f6094d03591b",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "underlyingviewforswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mandela02/UnderlyingViewForSwiftUI.git",
+      "state" : {
+        "revision" : "9496c57e2f84831a41617b4b594204b07cbbda46",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

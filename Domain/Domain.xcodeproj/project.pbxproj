@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		A46A64E8299F28760013FE1C /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = A46A64E7299F28760013FE1C /* Domain.docc */; };
 		A46A64E9299F28760013FE1C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = A46A64E6299F28760013FE1C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A46A6505299F2B0A0013FE1C /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6504299F2B0A0013FE1C /* Platform.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A46A64E3299F28760013FE1C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A64E6299F28760013FE1C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		A46A64E7299F28760013FE1C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
+		A46A6504299F2B0A0013FE1C /* Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,6 +24,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A6505299F2B0A0013FE1C /* Platform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +36,7 @@
 			children = (
 				A46A64E5299F28760013FE1C /* Domain */,
 				A46A64E4299F28760013FE1C /* Products */,
+				A46A6503299F2B0A0013FE1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +55,14 @@
 				A46A64E7299F28760013FE1C /* Domain.docc */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		A46A6503299F2B0A0013FE1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6504299F2B0A0013FE1C /* Platform.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +284,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,6 +313,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,6 +14,13 @@
 		A46A6478299F25F80013FE1C /* MySweetMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6477299F25F80013FE1C /* MySweetMovieTests.swift */; };
 		A46A6482299F25F80013FE1C /* MySweetMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6481299F25F80013FE1C /* MySweetMovieUITests.swift */; };
 		A46A6484299F25F80013FE1C /* MySweetMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6483299F25F80013FE1C /* MySweetMovieUITestsLaunchTests.swift */; };
+		A46A64F4299F2A2B0013FE1C /* UnderlyingViewForSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A46A64F3299F2A2B0013FE1C /* UnderlyingViewForSwiftUI */; };
+		A46A64F7299F2A540013FE1C /* IosUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = A46A64F6299F2A540013FE1C /* IosUtilities */; };
+		A46A64FA299F2AA90013FE1C /* SwiftUIExtension in Frameworks */ = {isa = PBXBuildFile; productRef = A46A64F9299F2AA90013FE1C /* SwiftUIExtension */; };
+		A46A64FD299F2AFA0013FE1C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46A64FC299F2AFA0013FE1C /* Domain.framework */; };
+		A46A64FE299F2AFA0013FE1C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46A64FC299F2AFA0013FE1C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46A6501299F2B000013FE1C /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6500299F2B000013FE1C /* Platform.framework */; };
+		A46A6502299F2B000013FE1C /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6500299F2B000013FE1C /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +40,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A46A64FF299F2AFA0013FE1C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A46A64FE299F2AFA0013FE1C /* Domain.framework in Embed Frameworks */,
+				A46A6502299F2B000013FE1C /* Platform.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A46A6463299F25F50013FE1C /* MySweetMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySweetMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A6466299F25F50013FE1C /* MySweetMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweetMovieApp.swift; sourceTree = "<group>"; };
@@ -44,6 +66,8 @@
 		A46A647D299F25F80013FE1C /* MySweetMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySweetMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A6481299F25F80013FE1C /* MySweetMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweetMovieUITests.swift; sourceTree = "<group>"; };
 		A46A6483299F25F80013FE1C /* MySweetMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweetMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A46A64FC299F2AFA0013FE1C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46A6500299F2B000013FE1C /* Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A64FD299F2AFA0013FE1C /* Domain.framework in Frameworks */,
+				A46A6501299F2B000013FE1C /* Platform.framework in Frameworks */,
+				A46A64F4299F2A2B0013FE1C /* UnderlyingViewForSwiftUI in Frameworks */,
+				A46A64FA299F2AA90013FE1C /* SwiftUIExtension in Frameworks */,
+				A46A64F7299F2A540013FE1C /* IosUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +107,7 @@
 				A46A6476299F25F80013FE1C /* MySweetMovieTests */,
 				A46A6480299F25F80013FE1C /* MySweetMovieUITests */,
 				A46A6464299F25F50013FE1C /* Products */,
+				A46A64FB299F2AFA0013FE1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +157,15 @@
 			path = MySweetMovieUITests;
 			sourceTree = "<group>";
 		};
+		A46A64FB299F2AFA0013FE1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6500299F2B000013FE1C /* Platform.framework */,
+				A46A64FC299F2AFA0013FE1C /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,12 +176,18 @@
 				A46A645F299F25F50013FE1C /* Sources */,
 				A46A6460299F25F50013FE1C /* Frameworks */,
 				A46A6461299F25F50013FE1C /* Resources */,
+				A46A64FF299F2AFA0013FE1C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MySweetMovie;
+			packageProductDependencies = (
+				A46A64F3299F2A2B0013FE1C /* UnderlyingViewForSwiftUI */,
+				A46A64F6299F2A540013FE1C /* IosUtilities */,
+				A46A64F9299F2AA90013FE1C /* SwiftUIExtension */,
+			);
 			productName = MySweetMovie;
 			productReference = A46A6463299F25F50013FE1C /* MySweetMovie.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +260,11 @@
 				Base,
 			);
 			mainGroup = A46A645A299F25F50013FE1C;
+			packageReferences = (
+				A46A64F2299F2A2B0013FE1C /* XCRemoteSwiftPackageReference "UnderlyingViewForSwiftUI" */,
+				A46A64F5299F2A540013FE1C /* XCRemoteSwiftPackageReference "SwiftUtilities" */,
+				A46A64F8299F2AA90013FE1C /* XCRemoteSwiftPackageReference "SwiftUIExtension" */,
+			);
 			productRefGroup = A46A6464299F25F50013FE1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,6 +475,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +505,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +635,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A46A64F2299F2A2B0013FE1C /* XCRemoteSwiftPackageReference "UnderlyingViewForSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mandela02/UnderlyingViewForSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		A46A64F5299F2A540013FE1C /* XCRemoteSwiftPackageReference "SwiftUtilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mandela02/SwiftUtilities.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		A46A64F8299F2AA90013FE1C /* XCRemoteSwiftPackageReference "SwiftUIExtension" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mandela02/SwiftUIExtension.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A46A64F3299F2A2B0013FE1C /* UnderlyingViewForSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A46A64F2299F2A2B0013FE1C /* XCRemoteSwiftPackageReference "UnderlyingViewForSwiftUI" */;
+			productName = UnderlyingViewForSwiftUI;
+		};
+		A46A64F6299F2A540013FE1C /* IosUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A46A64F5299F2A540013FE1C /* XCRemoteSwiftPackageReference "SwiftUtilities" */;
+			productName = IosUtilities;
+		};
+		A46A64F9299F2AA90013FE1C /* SwiftUIExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A46A64F8299F2AA90013FE1C /* XCRemoteSwiftPackageReference "SwiftUIExtension" */;
+			productName = SwiftUIExtension;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A46A645B299F25F50013FE1C /* Project object */;
 }
