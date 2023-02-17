@@ -19,4 +19,12 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         let result = try await dataRepository.fetchItem(path: .nowPlayingPath, param: param, needAuthToken: false)
         return try result.getData()
     }
+    
+    public func getUpcomming(language: String, page: Int) async throws -> MoviesEntity {
+        var param = baseParam
+        param["language"] = language
+        param["page"] = "\(page)"
+        let result = try await dataRepository.fetchItem(path: .upcommingPath, param: param, needAuthToken: false)
+        return try result.getData()
+    }
 }

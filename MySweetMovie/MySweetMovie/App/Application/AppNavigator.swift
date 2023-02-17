@@ -36,8 +36,8 @@ class AppNavigator: AppNavigatorProtocol {
     
     @MainActor
     func setHomeViewController() {
-        let getNowPlayingMoviesUseCase = Application.shared.userCaseProvider.getNowPlayingMovieUseCase()
-        let viewModel = HomeViewModel(getNowPlayingMoviesUseCase: getNowPlayingMoviesUseCase)
+        let getHomeUseCase = Application.shared.userCaseProvider.getHomeUseCase()
+        let viewModel = HomeViewModel(getHomeUseCase: getHomeUseCase)
         let view = HomeScreen(viewModel: viewModel)
         let viewController = BaseViewController(rootView: view)
         

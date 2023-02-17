@@ -14,22 +14,21 @@ import UnderlyingViewForSwiftUI
 @MainActor
 class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
     
-    init(getNowPlayingMoviesUseCase: GetNowPlayingMovieUseCase) {
-        self.getNowPlayingMoviesUseCase = getNowPlayingMoviesUseCase
+    init(getHomeUseCase: GetHomeUseCase) {
+        self.getHomeUseCase = getHomeUseCase
         super.init(state: HomeState())
     }
     
-    let getNowPlayingMoviesUseCase: GetNowPlayingMovieUseCase
+    let getHomeUseCase: GetHomeUseCase
     
     func fetchDataFromApi() async {
         do {
-            let result = try await getNowPlayingMoviesUseCase.run(input: .init(language: Settings.language.value,
-                                                                               page: 1))
+            let result = try await getHomeUseCase.run(input: Settings.language.value)
             
-            let section1 = Section(title: "", data: result.movies.map { SingleCell(model: $0) }, type: .big)
-            let section2 = Section(title: "", data: result.movies.map { SingleCell(model: $0) }, type: .small)
+            let upcoming = Section(title: "", data: result.upcoming.map { SingleCell(model: $0) }, type: .big)
+            let nowPlaying = Section(title: .nowPlaying, data: result.nowPlaying.map { SingleCell(model: $0) }, type: .small)
             
-            state.sections = [section1, section2]
+            state.sections = [upcoming, nowPlaying]
         } catch {
             self.state.loadingStatus = .error(error.localizedDescription)
         }

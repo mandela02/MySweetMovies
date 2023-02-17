@@ -18,6 +18,7 @@ struct HomeScreen: View {
     var body: some View {
         VStack {
             header
+                .padding(.horizontal, 20)
             gridView
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
@@ -37,7 +38,7 @@ extension HomeScreen {
         HStack {
             Text(String.home)
                 .foregroundColor(.white)
-                .font(.system(size: 24, weight: .bold))
+                .font(.system(size: 30, weight: .bold))
             Spacer()
             IconButton(icon: .magnifyingglass, action: {})
                 .foregroundColor(.white)
@@ -73,6 +74,15 @@ extension HomeScreen {
             }
 
         },
+                                 buildHeader: { collectionView, indexPath in
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
+                                                                             withReuseIdentifier: HeaderCollectionReusableView.className,
+                                                                             for: indexPath) as? HeaderCollectionReusableView
+            let section = viewModel.state.sections[indexPath.section]
+            headerView?.onMoreButtonTapped = {}
+            headerView?.setupView(title: section.title)
+            return headerView ?? UICollectionReusableView()
+        },
                                  extraSetting: { collectionView in
             collectionView.collectionViewLayout = buildCompositeLayout()
             collectionView.backgroundColor = .clear
@@ -81,6 +91,9 @@ extension HomeScreen {
                                     forCellWithReuseIdentifier: BigMovieCollectionViewCell.className)
             collectionView.register(SmallMovieCollectionViewCell.self,
                                     forCellWithReuseIdentifier: SmallMovieCollectionViewCell.className)
+            collectionView.register(HeaderCollectionReusableView.self,
+                                    forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                    withReuseIdentifier: HeaderCollectionReusableView.className)
         })
     }
 }

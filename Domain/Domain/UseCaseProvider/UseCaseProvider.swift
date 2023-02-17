@@ -22,4 +22,8 @@ public struct UseCaseProvider: UseCaseProviderProtocol {
     public func getNowPlayingMovieUseCase() -> GetNowPlayingMovieUseCase {
         GetNowPlayingMovieUseCase(moviesRepository: provider.moviesRepository)
     }
+    
+    public func getHomeUseCase() -> GetHomeUseCase {
+        GetHomeUseCase(moviesRepository: provider.moviesRepository)
+    }
 }

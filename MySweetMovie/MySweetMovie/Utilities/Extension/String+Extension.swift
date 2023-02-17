@@ -82,4 +82,5 @@ extension String {
     static var cancel: String { String(localizedKey: "cancel") }
     static var home: String { String(localizedKey: "home") }
     static var nowPlaying: String { String(localizedKey: "nowPlaying") }
+    static var viewAll: String { String(localizedKey: "viewAll") }
 }
