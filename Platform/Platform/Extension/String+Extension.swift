@@ -13,5 +13,5 @@ extension String {
     
     static let movieGenrePath = "/3/genre/movie/list"
     static let tvGenrePath = "/3/genre/tv/list"
-    static let nowPlayingPath = "3/movie/now_playing"
+    static let nowPlayingPath = "/3/movie/now_playing"
 }

@@ -9,8 +9,13 @@ import Foundation
 import SwiftUI
 
 struct HomeScreen: View {
+    @StateObject
+    var viewModel: HomeViewModel
     
     var body: some View {
         Color.clear
+            .viewDidLoad(initState: {
+                await viewModel.fetchDataFromApi()
+            })
     }
 }
