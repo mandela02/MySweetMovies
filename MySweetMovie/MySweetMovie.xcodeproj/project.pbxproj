@@ -23,6 +23,21 @@
 		A46A6586299F2E320013FE1C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6584299F2E320013FE1C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46A6589299F2E350013FE1C /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6588299F2E350013FE1C /* Platform.framework */; };
 		A46A658A299F2E350013FE1C /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6588299F2E350013FE1C /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6590299F2F470013FE1C /* BaseViewController.swift */; };
+		A46A6593299F2F470013FE1C /* BaseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6591299F2F470013FE1C /* BaseNavigator.swift */; };
+		A46A659A299F2FB30013FE1C /* AuthenticationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6598299F2FB30013FE1C /* AuthenticationModifier.swift */; };
+		A46A659B299F2FB30013FE1C /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6599299F2FB30013FE1C /* ViewDidLoadModifier.swift */; };
+		A46A65A1299F2FCC0013FE1C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A659D299F2FCC0013FE1C /* UIViewController+Extension.swift */; };
+		A46A65A2299F2FCC0013FE1C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A659E299F2FCC0013FE1C /* String+Extension.swift */; };
+		A46A65A3299F2FCC0013FE1C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A659F299F2FCC0013FE1C /* Color+Extension.swift */; };
+		A46A65A4299F2FCC0013FE1C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65A0299F2FCC0013FE1C /* View+Extension.swift */; };
+		A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65A6299F2FD70013FE1C /* BiometricAuthenticationManager.swift */; };
+		A46A65A9299F2FD70013FE1C /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65A7299F2FD70013FE1C /* InternetManager.swift */; };
+		A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65AA299F2FEE0013FE1C /* Settings.swift */; };
+		A46A65B0299F30240013FE1C /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65AE299F30240013FE1C /* AppNavigator.swift */; };
+		A46A65B1299F30240013FE1C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65AF299F30240013FE1C /* Application.swift */; };
+		A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B2299F30540013FE1C /* OnBoardingView.swift */; };
+		A46A65B8299F30B60013FE1C /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B7299F30B60013FE1C /* LockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +88,21 @@
 		A46A656D299F2D530013FE1C /* MySweetMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweetMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A46A6584299F2E320013FE1C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A6588299F2E350013FE1C /* Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46A6590299F2F470013FE1C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A46A6591299F2F470013FE1C /* BaseNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigator.swift; sourceTree = "<group>"; };
+		A46A6598299F2FB30013FE1C /* AuthenticationModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModifier.swift; sourceTree = "<group>"; };
+		A46A6599299F2FB30013FE1C /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		A46A659D299F2FCC0013FE1C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A46A659E299F2FCC0013FE1C /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A46A659F299F2FCC0013FE1C /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		A46A65A0299F2FCC0013FE1C /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		A46A65A6299F2FD70013FE1C /* BiometricAuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticationManager.swift; sourceTree = "<group>"; };
+		A46A65A7299F2FD70013FE1C /* InternetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
+		A46A65AA299F2FEE0013FE1C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A46A65AE299F30240013FE1C /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		A46A65AF299F30240013FE1C /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		A46A65B2299F30540013FE1C /* OnBoardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		A46A65B7299F30B60013FE1C /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,13 +159,14 @@
 		A46A6549299F2D510013FE1C /* MySweetMovie */ = {
 			isa = PBXGroup;
 			children = (
-				A46A654A299F2D510013FE1C /* AppDelegate.swift */,
-				A46A654C299F2D510013FE1C /* SceneDelegate.swift */,
+				A46A6596299F2F9C0013FE1C /* Utilities */,
+				A46A658D299F2ED40013FE1C /* App */,
+				A46A6594299F2F670013FE1C /* Resource */,
+				A46A658F299F2F470013FE1C /* Base */,
+				A46A65B5299F30B60013FE1C /* View */,
+				A46A658B299F2EAA0013FE1C /* Screen */,
 				A46A654E299F2D510013FE1C /* ViewController.swift */,
 				A46A6550299F2D510013FE1C /* Main.storyboard */,
-				A46A6553299F2D530013FE1C /* Assets.xcassets */,
-				A46A6555299F2D530013FE1C /* LaunchScreen.storyboard */,
-				A46A6558299F2D530013FE1C /* Info.plist */,
 			);
 			path = MySweetMovie;
 			sourceTree = "<group>";
@@ -164,6 +195,148 @@
 				A46A6584299F2E320013FE1C /* Domain.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A46A658B299F2EAA0013FE1C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65B4299F30580013FE1C /* OnBoarding */,
+				A46A658C299F2EBE0013FE1C /* Launch */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		A46A658C299F2EBE0013FE1C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6555299F2D530013FE1C /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		A46A658D299F2ED40013FE1C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65AD299F30240013FE1C /* Application */,
+				A46A658E299F2ED90013FE1C /* Delegate */,
+				A46A65A5299F2FD70013FE1C /* Environment */,
+				A46A6558299F2D530013FE1C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A46A658E299F2ED90013FE1C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A46A654A299F2D510013FE1C /* AppDelegate.swift */,
+				A46A654C299F2D510013FE1C /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A46A658F299F2F470013FE1C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6590299F2F470013FE1C /* BaseViewController.swift */,
+				A46A6591299F2F470013FE1C /* BaseNavigator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A46A6594299F2F670013FE1C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6595299F2F6E0013FE1C /* Image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A46A6595299F2F6E0013FE1C /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6553299F2D530013FE1C /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		A46A6596299F2F9C0013FE1C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65AC299F2FF30013FE1C /* Settings */,
+				A46A659C299F2FCC0013FE1C /* Extension */,
+				A46A6597299F2FB30013FE1C /* ViewModifier */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A46A6597299F2FB30013FE1C /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6598299F2FB30013FE1C /* AuthenticationModifier.swift */,
+				A46A6599299F2FB30013FE1C /* ViewDidLoadModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		A46A659C299F2FCC0013FE1C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A46A659D299F2FCC0013FE1C /* UIViewController+Extension.swift */,
+				A46A659E299F2FCC0013FE1C /* String+Extension.swift */,
+				A46A659F299F2FCC0013FE1C /* Color+Extension.swift */,
+				A46A65A0299F2FCC0013FE1C /* View+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A46A65A5299F2FD70013FE1C /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65A6299F2FD70013FE1C /* BiometricAuthenticationManager.swift */,
+				A46A65A7299F2FD70013FE1C /* InternetManager.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		A46A65AC299F2FF30013FE1C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65AA299F2FEE0013FE1C /* Settings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A46A65AD299F30240013FE1C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65AE299F30240013FE1C /* AppNavigator.swift */,
+				A46A65AF299F30240013FE1C /* Application.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A46A65B4299F30580013FE1C /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65B2299F30540013FE1C /* OnBoardingView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		A46A65B5299F30B60013FE1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65B6299F30B60013FE1C /* LockView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A46A65B6299F30B60013FE1C /* LockView */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65B7299F30B60013FE1C /* LockView.swift */,
+			);
+			path = LockView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +481,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A65B1299F30240013FE1C /* Application.swift in Sources */,
+				A46A65A1299F2FCC0013FE1C /* UIViewController+Extension.swift in Sources */,
+				A46A65A3299F2FCC0013FE1C /* Color+Extension.swift in Sources */,
+				A46A65A2299F2FCC0013FE1C /* String+Extension.swift in Sources */,
+				A46A65A9299F2FD70013FE1C /* InternetManager.swift in Sources */,
+				A46A65B8299F30B60013FE1C /* LockView.swift in Sources */,
+				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
 				A46A654F299F2D510013FE1C /* ViewController.swift in Sources */,
+				A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */,
+				A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */,
+				A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */,
+				A46A65B0299F30240013FE1C /* AppNavigator.swift in Sources */,
+				A46A659B299F2FB30013FE1C /* ViewDidLoadModifier.swift in Sources */,
 				A46A654B299F2D510013FE1C /* AppDelegate.swift in Sources */,
+				A46A65A4299F2FCC0013FE1C /* View+Extension.swift in Sources */,
 				A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */,
+				A46A659A299F2FB30013FE1C /* AuthenticationModifier.swift in Sources */,
+				A46A6593299F2F470013FE1C /* BaseNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +677,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J243X8N8UC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySweetMovie/Info.plist;
+				INFOPLIST_FILE = MySweetMovie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -517,7 +705,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J243X8N8UC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySweetMovie/Info.plist;
+				INFOPLIST_FILE = MySweetMovie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

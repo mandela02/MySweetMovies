@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mandela02/CoreApiConcurrency.git",
       "state" : {
-        "revision" : "629515297b822f3fddfc3e86c606a9ceb3b6ca85",
-        "version" : "1.0.0"
+        "revision" : "94e3dc30194c1b3af08bf7d09b649717b662601b",
+        "version" : "1.0.1"
       }
     },
     {

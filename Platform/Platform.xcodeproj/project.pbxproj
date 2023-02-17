@@ -10,12 +10,24 @@
 		A46A64A0299F27D00013FE1C /* Platform.docc in Sources */ = {isa = PBXBuildFile; fileRef = A46A649F299F27D00013FE1C /* Platform.docc */; };
 		A46A64A1299F27D00013FE1C /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = A46A649E299F27D00013FE1C /* Platform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A46A64F1299F29B10013FE1C /* CoreApiConcurrency in Frameworks */ = {isa = PBXBuildFile; productRef = A46A64F0299F29B10013FE1C /* CoreApiConcurrency */; };
+		A46A65D0299F31030013FE1C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65C6299F31020013FE1C /* String+Extension.swift */; };
+		A46A65D1299F31030013FE1C /* RepositoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65C8299F31020013FE1C /* RepositoryProvider.swift */; };
+		A46A65D2299F31030013FE1C /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65CA299F31020013FE1C /* BaseEntity.swift */; };
+		A46A65D3299F31030013FE1C /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65CB299F31020013FE1C /* BaseRepository.swift */; };
+		A46A65D4299F31030013FE1C /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65CD299F31020013FE1C /* LoginRepository.swift */; };
+		A46A65D5299F31030013FE1C /* LoginResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65CF299F31030013FE1C /* LoginResponseEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A46A649B299F27D00013FE1C /* Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A649E299F27D00013FE1C /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
 		A46A649F299F27D00013FE1C /* Platform.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Platform.docc; sourceTree = "<group>"; };
+		A46A65C6299F31020013FE1C /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A46A65C8299F31020013FE1C /* RepositoryProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProvider.swift; sourceTree = "<group>"; };
+		A46A65CA299F31020013FE1C /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		A46A65CB299F31020013FE1C /* BaseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		A46A65CD299F31020013FE1C /* LoginRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		A46A65CF299F31030013FE1C /* LoginResponseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,10 +61,56 @@
 		A46A649D299F27D00013FE1C /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				A46A65C9299F31020013FE1C /* Base */,
+				A46A65CE299F31030013FE1C /* Entity */,
+				A46A65C5299F31020013FE1C /* Extension */,
+				A46A65C7299F31020013FE1C /* Provider */,
+				A46A65CC299F31020013FE1C /* Repository */,
 				A46A649E299F27D00013FE1C /* Platform.h */,
 				A46A649F299F27D00013FE1C /* Platform.docc */,
 			);
 			path = Platform;
+			sourceTree = "<group>";
+		};
+		A46A65C5299F31020013FE1C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65C6299F31020013FE1C /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A46A65C7299F31020013FE1C /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65C8299F31020013FE1C /* RepositoryProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		A46A65C9299F31020013FE1C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65CA299F31020013FE1C /* BaseEntity.swift */,
+				A46A65CB299F31020013FE1C /* BaseRepository.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A46A65CC299F31020013FE1C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65CD299F31020013FE1C /* LoginRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A46A65CE299F31030013FE1C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65CF299F31030013FE1C /* LoginResponseEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A65D0299F31030013FE1C /* String+Extension.swift in Sources */,
 				A46A64A0299F27D00013FE1C /* Platform.docc in Sources */,
+				A46A65D1299F31030013FE1C /* RepositoryProvider.swift in Sources */,
+				A46A65D3299F31030013FE1C /* BaseRepository.swift in Sources */,
+				A46A65D2299F31030013FE1C /* BaseEntity.swift in Sources */,
+				A46A65D5299F31030013FE1C /* LoginResponseEntity.swift in Sources */,
+				A46A65D4299F31030013FE1C /* LoginRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
