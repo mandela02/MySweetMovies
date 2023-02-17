@@ -6,18 +6,23 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct OnBoardingView: View {
+    @EnvironmentObject
+    var genresManager: GenresManager
+    
     var body: some View {
-        Text(String.helloWorld)
-            .foregroundColor(.white)
-            .deviceAuthentication()
-    }
-}
-
-struct OnBoardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoardingView()
+        Image.movieAndSpeaker
+            .resizable()
+            .scaledToFit()
+            .frame(width: 200, height: 200, alignment: .center)
+            .background {
+                Color.blackRussian
+                    .ignoresSafeArea()
+            }
+            .viewDidLoad(initState: {
+                await genresManager.fetchDataFromApi()
+                Application.shared.navigator?.setHomeViewController()
+            })
     }
 }

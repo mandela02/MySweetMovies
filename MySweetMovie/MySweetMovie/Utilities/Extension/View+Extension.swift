@@ -10,6 +10,8 @@ import SwiftUI
 import IosUtilities
 
 extension View {
+    
+    @MainActor
     func setEnvironment() -> some View {
         self
             .environmentObject(Application.shared.internetManager)

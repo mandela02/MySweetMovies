@@ -39,6 +39,7 @@
 		A46A65DB299F33F00013FE1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46A65DD299F33F00013FE1C /* Localizable.strings */; };
 		A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65E3299F61F60013FE1C /* SettingScreen.swift */; };
 		A46A65F3299F6F0E0013FE1C /* GenresManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F2299F6F0E0013FE1C /* GenresManager.swift */; };
+		A46A65F5299F75710013FE1C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F4299F75710013FE1C /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		A46A65DE299F33F30013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A46A65E3299F61F60013FE1C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		A46A65F2299F6F0E0013FE1C /* GenresManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresManager.swift; sourceTree = "<group>"; };
+		A46A65F4299F75710013FE1C /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				A46A6553299F2D530013FE1C /* Assets.xcassets */,
+				A46A65F4299F75710013FE1C /* ImageHelper.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */,
 				A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */,
 				A46A65B0299F30240013FE1C /* AppNavigator.swift in Sources */,
+				A46A65F5299F75710013FE1C /* ImageHelper.swift in Sources */,
 				A46A659B299F2FB30013FE1C /* ViewDidLoadModifier.swift in Sources */,
 				A46A654B299F2D510013FE1C /* AppDelegate.swift in Sources */,
 				A46A65A4299F2FCC0013FE1C /* View+Extension.swift in Sources */,

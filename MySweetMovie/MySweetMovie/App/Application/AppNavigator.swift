@@ -12,6 +12,7 @@ import SwiftUIExtension
 protocol AppNavigatorProtocol: BaseNavigator {
     var window: UIWindow? { get }
     func setRootViewController()
+    func setHomeViewController()
 }
 
 class AppNavigator: AppNavigatorProtocol {
@@ -24,6 +25,16 @@ class AppNavigator: AppNavigatorProtocol {
     var navigationController: UINavigationController = UINavigationController()
     
     func setRootViewController() {
+        let view = OnBoardingView()
+        let viewController = BaseViewController(rootView: view)
+        
+        navigationController.setViewControllers([viewController], animated: false)
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
+    
+    func setHomeViewController() {
         let view = SettingScreen()
         let viewController = BaseViewController(rootView: view)
         
@@ -31,6 +42,5 @@ class AppNavigator: AppNavigatorProtocol {
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-
     }
 }

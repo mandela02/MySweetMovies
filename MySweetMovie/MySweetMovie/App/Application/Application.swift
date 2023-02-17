@@ -9,6 +9,7 @@ import Foundation
 import Domain
 import UIKit
 
+@MainActor
 class Application {
     static let shared = Application()
 
