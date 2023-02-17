@@ -23,7 +23,6 @@ struct CircleLoadingView: View {
                         thickess: 12,
                         innerThickess: 8)
             BlinkingLogo(size: .init(width: 80, height: 80))
-                .offset(y: -10)
         }
         .frame(width: size.width, height: size.height, alignment: .center)
     }

@@ -43,4 +43,14 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         let result = try await dataRepository.fetchItem(path: .topRatedPath, param: param, needAuthToken: false)
         return try result.getData()
     }
+    
+    public func searchByGenre(genre: Int, language: String, page: Int) async throws -> MoviesEntity {
+        var param = baseParam
+        param["language"] = language
+        param["page"] = "\(page)"
+        param["with_genres"] = "\(genre)"
+        param["sort_by"] = "popularity.desc"
+        let result = try await dataRepository.fetchItem(path: .discoverMovie, param: param, needAuthToken: false)
+        return try result.getData()
+    }
 }

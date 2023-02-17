@@ -47,6 +47,7 @@ extension HomeScreen {
     
     private var gridView: some View {
         UnderlyingCollectionView(data: viewModel.state.sections,
+                                 onRefesh: viewModel.pullToRefresh,
                                  calculateSizeForCell: { (_, _)  in .zero},
                                  buildCellForItem: { collectionView, indexPath in
             let section = viewModel.state.sections[indexPath.section]

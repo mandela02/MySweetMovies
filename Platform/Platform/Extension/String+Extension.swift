@@ -17,4 +17,5 @@ extension String {
     static let upcommingPath = "/3/movie/upcoming"
     static let popularPath = "/3/movie/popular"
     static let topRatedPath = "/3/movie/top_rated"
+    static let discoverMovie = "/3/discover/movie"
 }

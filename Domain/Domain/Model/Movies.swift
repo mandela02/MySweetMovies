@@ -16,6 +16,11 @@ public struct Movies {
     public let movies: [Movie]
 }
 
+public struct MovieGenre {
+    public let genre: Genre
+    public let movies: [Movie]
+}
+
 public struct Movie: Identifiable {
     public let id: Int
 
