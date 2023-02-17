@@ -13,14 +13,6 @@ public class RepositoryProvider {
     }
     
     private let apiEndpoint: String
-
-    private var loginRepository: LoginRepository?
-
-    public func makeLoginRepository() -> LoginRepository {
-        if let loginRepository = loginRepository {
-            return loginRepository
-        }
-        self.loginRepository = LoginRepository(endpoint: self.apiEndpoint)
-        return loginRepository!
-    }
+    
+    public lazy var genresRepository = GenresRepository(endpoint: self.apiEndpoint)
 }

@@ -15,7 +15,7 @@ public struct UseCaseProvider: UseCaseProviderProtocol {
         self.provider = repositoryProvider
     }
     
-    public func loginUseCase() -> LoginUseCase {
-        LoginUseCase(loginRepository: provider.makeLoginRepository())
+    public func getGenresUseCase() -> GetGenresUseCase {
+        return GetGenresUseCase(genresRepository: provider.genresRepository)
     }
 }
