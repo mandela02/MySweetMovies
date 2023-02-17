@@ -16,11 +16,15 @@ class Application {
         userCaseProvider = UseCaseProvider()
         internetManager = InternetManager()
         biometricAuthenticationManager = BiometricAuthenticationManager()
+        
+        genresManager = GenresManager(getGenresUseCase: userCaseProvider.getGenresUseCase())
     }
     
     private(set) var userCaseProvider: UseCaseProviderProtocol
+    
     private(set) var internetManager: InternetManager
     private(set) var biometricAuthenticationManager: BiometricAuthenticationManager
+    private(set) var genresManager: GenresManager
     
     var navigator: AppNavigator? {
         UIViewController.currentSceneDelegate?.navigator

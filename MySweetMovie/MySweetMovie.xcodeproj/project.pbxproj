@@ -38,6 +38,7 @@
 		A46A65B8299F30B60013FE1C /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B7299F30B60013FE1C /* LockView.swift */; };
 		A46A65DB299F33F00013FE1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46A65DD299F33F00013FE1C /* Localizable.strings */; };
 		A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65E3299F61F60013FE1C /* SettingScreen.swift */; };
+		A46A65F3299F6F0E0013FE1C /* GenresManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F2299F6F0E0013FE1C /* GenresManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		A46A65DC299F33F00013FE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A46A65DE299F33F30013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A46A65E3299F61F60013FE1C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		A46A65F2299F6F0E0013FE1C /* GenresManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			children = (
 				A46A65A6299F2FD70013FE1C /* BiometricAuthenticationManager.swift */,
 				A46A65A7299F2FD70013FE1C /* InternetManager.swift */,
+				A46A65F2299F6F0E0013FE1C /* GenresManager.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */,
 				A46A659A299F2FB30013FE1C /* AuthenticationModifier.swift in Sources */,
 				A46A6593299F2F470013FE1C /* BaseNavigator.swift in Sources */,
+				A46A65F3299F6F0E0013FE1C /* GenresManager.swift in Sources */,
 				A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
