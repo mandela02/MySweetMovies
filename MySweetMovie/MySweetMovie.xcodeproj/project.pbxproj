@@ -37,6 +37,7 @@
 		A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B2299F30540013FE1C /* OnBoardingView.swift */; };
 		A46A65B8299F30B60013FE1C /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B7299F30B60013FE1C /* LockView.swift */; };
 		A46A65DB299F33F00013FE1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46A65DD299F33F00013FE1C /* Localizable.strings */; };
+		A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65E3299F61F60013FE1C /* SettingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		A46A65DA299F33E00013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A46A65DC299F33F00013FE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A46A65DE299F33F30013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A46A65E3299F61F60013FE1C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		A46A658B299F2EAA0013FE1C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				A46A65E2299F61EA0013FE1C /* Setting */,
 				A46A65B4299F30580013FE1C /* OnBoarding */,
 				A46A658C299F2EBE0013FE1C /* Launch */,
 			);
@@ -262,7 +265,6 @@
 			children = (
 				A46A65AC299F2FF30013FE1C /* Settings */,
 				A46A659C299F2FCC0013FE1C /* Extension */,
-				A46A6597299F2FB30013FE1C /* ViewModifier */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -340,6 +342,7 @@
 		A46A65D6299F32700013FE1C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A46A6597299F2FB30013FE1C /* ViewModifier */,
 				A46A65B5299F30B60013FE1C /* View */,
 				A46A658B299F2EAA0013FE1C /* Screen */,
 			);
@@ -352,6 +355,14 @@
 				A46A65DD299F33F00013FE1C /* Localizable.strings */,
 			);
 			path = Language;
+			sourceTree = "<group>";
+		};
+		A46A65E2299F61EA0013FE1C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65E3299F61F60013FE1C /* SettingScreen.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +525,7 @@
 				A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */,
 				A46A659A299F2FB30013FE1C /* AuthenticationModifier.swift in Sources */,
 				A46A6593299F2F470013FE1C /* BaseNavigator.swift in Sources */,
+				A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

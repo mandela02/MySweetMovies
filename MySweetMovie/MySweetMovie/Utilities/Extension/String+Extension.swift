@@ -6,9 +6,38 @@
 //
 
 import Foundation
+import IosUtilities
 
-enum LanguageCode: String, CaseIterable {
+enum LanguageCode: String, CaseIterable, Identifiable {
     case english = "en"
+    case vietnam = "vi"
+    
+    var id: String {
+        return UUID().uuidString
+    }
+    
+    var nativeName: String {
+        switch self {
+        case .english:
+            return "English"
+        case .vietnam:
+            return "Tiếng Việt"
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .english:
+            return "\(String.english) (\(nativeName))"
+        case .vietnam:
+            return "\(String.vietnamese) (\(nativeName))"
+        }
+    }
+    
+    func changeLanguage() {
+        Settings.language.value = self.rawValue
+        NotificationCenter.default.post(name: .languageDidChange, object: nil)
+    }
 }
 
 extension String {
@@ -43,4 +72,6 @@ extension String {
     static var helloWorld: String { String(localizedKey: "helloWorld") }
     static var locked: String { String(localizedKey: "locked") }
     static var scanFaceID: String { String(localizedKey: "scanFaceID") }
+    static var english: String { String(localizedKey: "english") }
+    static var vietnamese: String { String(localizedKey: "vietnamese") }
 }

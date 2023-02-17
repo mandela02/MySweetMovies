@@ -24,7 +24,7 @@ class AppNavigator: AppNavigatorProtocol {
     var navigationController: UINavigationController = UINavigationController()
     
     func setRootViewController() {
-        let view = OnBoardingView()
+        let view = SettingScreen()
         let viewController = BaseViewController(rootView: view)
         
         navigationController.setViewControllers([viewController], animated: false)

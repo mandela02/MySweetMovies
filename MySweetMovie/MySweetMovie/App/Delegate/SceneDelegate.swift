@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import IosUtilities
+import SwiftUIExtension
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, HasWindow, WindowDetector {
 
     var window: UIWindow?
     var navigator: AppNavigator?

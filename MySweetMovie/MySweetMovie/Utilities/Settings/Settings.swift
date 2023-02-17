@@ -18,7 +18,7 @@ struct Settings {
     static var isAuthenticateNeeded = UserDefault<Bool>(key: SettingKey.isAuthenticateNeeded.rawValue,
                                                         defaultValue: false)
     static var language = UserDefault<String>(key: SettingKey.language.rawValue,
-                                              defaultValue: LanguageCode.english.rawValue)
+                                              defaultValue: String.languageCodeDevice)
     static var theme = UserDefault<Int>(key: SettingKey.theme.rawValue,
                                         defaultValue: Theme.freshOrange.rawValue)
 }
