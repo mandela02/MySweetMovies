@@ -8,6 +8,7 @@
 import Foundation
 import Domain
 import UIKit
+import Nuke
 
 @MainActor
 class Application {
@@ -27,6 +28,14 @@ class Application {
     private(set) var biometricAuthenticationManager: BiometricAuthenticationManager
     private(set) var genresManager: GenresManager
     
+    let pipeline = ImagePipeline {
+        $0.dataLoader = {
+            let config = URLSessionConfiguration.default
+            config.urlCache = URLCache(memoryCapacity: 10_000_000, diskCapacity: 1_000_000_000)
+            return DataLoader(configuration: config)
+        }()
+    }
+
     var navigator: AppNavigator? {
         UIViewController.currentSceneDelegate?.navigator
     }

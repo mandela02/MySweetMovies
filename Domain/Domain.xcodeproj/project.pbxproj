@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90BD7EED299FDD4D00550533 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EEC299FDD4D00550533 /* HomeData.swift */; };
+		90BD7EEF299FDD7B00550533 /* GetHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */; };
+		90BD7EF6299FE79A00550533 /* GetMoviesByGenresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */; };
 		A46A64E8299F28760013FE1C /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = A46A64E7299F28760013FE1C /* Domain.docc */; };
 		A46A64E9299F28760013FE1C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = A46A64E6299F28760013FE1C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A46A6505299F2B0A0013FE1C /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6504299F2B0A0013FE1C /* Platform.framework */; };
@@ -15,9 +18,16 @@
 		A46A65C4299F30DA0013FE1C /* UseCaseProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65C0299F30DA0013FE1C /* UseCaseProviderProtocol.swift */; };
 		A46A65EE299F6B460013FE1C /* GetGenresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65ED299F6B460013FE1C /* GetGenresUseCase.swift */; };
 		A46A65F1299F6B580013FE1C /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F0299F6B580013FE1C /* Genre.swift */; };
+		A46A65FD299F7F890013FE1C /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65FC299F7F890013FE1C /* Movies.swift */; };
+		A46A6600299F82010013FE1C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65FF299F82010013FE1C /* Date+Extension.swift */; };
+		A46A6602299F821B0013FE1C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6601299F821B0013FE1C /* String+Extension.swift */; };
+		A46A6605299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6604299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90BD7EEC299FDD4D00550533 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeUseCase.swift; sourceTree = "<group>"; };
+		90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesByGenresUseCase.swift; sourceTree = "<group>"; };
 		A46A64E3299F28760013FE1C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A64E6299F28760013FE1C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		A46A64E7299F28760013FE1C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -27,6 +37,10 @@
 		A46A65C0299F30DA0013FE1C /* UseCaseProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseProviderProtocol.swift; sourceTree = "<group>"; };
 		A46A65ED299F6B460013FE1C /* GetGenresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenresUseCase.swift; sourceTree = "<group>"; };
 		A46A65F0299F6B580013FE1C /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		A46A65FC299F7F890013FE1C /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		A46A65FF299F82010013FE1C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		A46A6601299F821B0013FE1C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A46A6604299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNowPlayingMoviesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,7 @@
 		A46A64E5299F28760013FE1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A46A65FE299F81F40013FE1C /* Extension */,
 				A46A65EF299F6B4E0013FE1C /* Model */,
 				A46A65B9299F30DA0013FE1C /* Base */,
 				A46A65BB299F30DA0013FE1C /* UseCase */,
@@ -90,6 +105,7 @@
 		A46A65BB299F30DA0013FE1C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				A46A6603299F833A0013FE1C /* Movies */,
 				A46A65BC299F30DA0013FE1C /* Genres */,
 			);
 			path = UseCase;
@@ -116,8 +132,29 @@
 			isa = PBXGroup;
 			children = (
 				A46A65F0299F6B580013FE1C /* Genre.swift */,
+				A46A65FC299F7F890013FE1C /* Movies.swift */,
+				90BD7EEC299FDD4D00550533 /* HomeData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A46A65FE299F81F40013FE1C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65FF299F82010013FE1C /* Date+Extension.swift */,
+				A46A6601299F821B0013FE1C /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A46A6603299F833A0013FE1C /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				A46A6604299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift */,
+				90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */,
+				90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */,
+			);
+			path = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +236,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A6605299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift in Sources */,
+				90BD7EEF299FDD7B00550533 /* GetHomeUseCase.swift in Sources */,
+				A46A65FD299F7F890013FE1C /* Movies.swift in Sources */,
+				A46A6602299F821B0013FE1C /* String+Extension.swift in Sources */,
 				A46A65C3299F30DA0013FE1C /* UseCaseProvider.swift in Sources */,
 				A46A65C4299F30DA0013FE1C /* UseCaseProviderProtocol.swift in Sources */,
 				A46A65C1299F30DA0013FE1C /* BaseUseCase.swift in Sources */,
+				90BD7EF6299FE79A00550533 /* GetMoviesByGenresUseCase.swift in Sources */,
 				A46A65F1299F6B580013FE1C /* Genre.swift in Sources */,
+				A46A6600299F82010013FE1C /* Date+Extension.swift in Sources */,
 				A46A65EE299F6B460013FE1C /* GetGenresUseCase.swift in Sources */,
 				A46A64E8299F28760013FE1C /* Domain.docc in Sources */,
+				90BD7EED299FDD4D00550533 /* HomeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

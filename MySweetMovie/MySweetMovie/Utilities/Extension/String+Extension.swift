@@ -65,6 +65,10 @@ extension String {
     init(localizedKey key: String) {
         self.init(resourceName: .localeIdentifier, localizedKey: key)
     }
+    
+    var tmdbImage: String {
+        return "https://image.tmdb.org/t/p/w500\(self)"
+    }
 }
 
 
@@ -74,4 +78,11 @@ extension String {
     static var scanFaceID: String { String(localizedKey: "scanFaceID") }
     static var english: String { String(localizedKey: "english") }
     static var vietnamese: String { String(localizedKey: "vietnamese") }
+    static var error: String { String(localizedKey: "error") }
+    static var cancel: String { String(localizedKey: "cancel") }
+    static var home: String { String(localizedKey: "home") }
+    static var nowPlaying: String { String(localizedKey: "nowPlaying") }
+    static var viewAll: String { String(localizedKey: "viewAll") }
+    static var trending: String { String(localizedKey: "trending") }
+    static var topRated: String { String(localizedKey: "topRated") }
 }

@@ -13,3 +13,11 @@
 "locked" = "Locked";
 "scanFaceID" = "Scan faceID to open";
 
+"error" = "Error!";
+"cancel" = "Cancel";
+"home" = "Home";
+
+"nowPlaying" = "Now Playing";
+"viewAll" = "View All";
+"trending" = "Trending";
+"topRated" = "Top Rated";

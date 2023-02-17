@@ -34,8 +34,13 @@ class AppNavigator: AppNavigatorProtocol {
         window?.makeKeyAndVisible()
     }
     
+    @MainActor
     func setHomeViewController() {
-        let view = SettingScreen()
+        let getHomeUseCase = Application.shared.userCaseProvider.getHomeUseCase()
+        let getMoviesByGenresUseCase = Application.shared.userCaseProvider.getMoviesByGenresUseCase()
+        let viewModel = HomeViewModel(getHomeUseCase: getHomeUseCase,
+                                      getMoviesByGenresUseCase: getMoviesByGenresUseCase)
+        let view = HomeScreen(viewModel: viewModel)
         let viewController = BaseViewController(rootView: view)
         
         navigationController.setViewControllers([viewController], animated: false)

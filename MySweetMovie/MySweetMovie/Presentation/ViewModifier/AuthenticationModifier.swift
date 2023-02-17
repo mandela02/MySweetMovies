@@ -20,7 +20,7 @@ struct AuthenticationModifier: ViewModifier {
                         .transition(.opacity)
                 }
             }
-            .onBackground {
+            .onEnterBackground {
                 if Settings.isAuthenticateNeeded.value {
                     authenticationManager.state.isUnlocked = false
                 }

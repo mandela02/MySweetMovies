@@ -12,17 +12,26 @@ struct OnBoardingView: View {
     var genresManager: GenresManager
     
     var body: some View {
-        Image.movieAndSpeaker
-            .resizable()
-            .scaledToFit()
-            .frame(width: 200, height: 200, alignment: .center)
-            .background {
-                Color.blackRussian
-                    .ignoresSafeArea()
-            }
-            .viewDidLoad(initState: {
-                await genresManager.fetchDataFromApi()
-                Application.shared.navigator?.setHomeViewController()
-            })
+        ZStack {
+            Color.blackRussian
+                .ignoresSafeArea()
+                .opacity(0.0001)
+            Image.movieAndSpeaker
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200, alignment: .center)
+                .foregroundColor(.white)
+        }
+        .background {
+            Image.splashBackdrop
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .viewDidLoad(initState: {
+            await genresManager.fetchDataFromApi()
+            Application.shared.navigator?.setHomeViewController()
+        })
     }
 }
