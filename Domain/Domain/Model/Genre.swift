@@ -12,7 +12,7 @@ public struct Genres {
     public let tvGenres: [Genre]
 }
 
-public struct Genre {
-    let id: Int
-    let name: String
+public struct Genre: Identifiable {
+    public let id: Int
+    public let name: String
 }
