@@ -13,3 +13,5 @@
 "locked" = "Đã bị khoá";
 "scanFaceID" = "Quét faceID để mở";
 
+"error" = "Đã có lỗi xảy ra!";
+"cancel" = "Huỷ";

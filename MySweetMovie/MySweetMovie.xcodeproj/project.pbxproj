@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */; };
+		90BD7ECA299FBF9400550533 /* CirlceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */; };
+		90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */; };
+		90BD7ECF299FC0FF00550533 /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ECE299FC0FF00550533 /* ToastViewModifier.swift */; };
+		90BD7ED1299FC2CA00550533 /* ErrorViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ED0299FC2CA00550533 /* ErrorViewModifier.swift */; };
+		90BD7ED4299FC2FD00550533 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ED3299FC2FD00550533 /* ErrorAlertView.swift */; };
+		90BD7ED6299FC52D00550533 /* ErrorAlertViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ED5299FC52D00550533 /* ErrorAlertViewModifier.swift */; };
 		A46A654B299F2D510013FE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A654A299F2D510013FE1C /* AppDelegate.swift */; };
 		A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A654C299F2D510013FE1C /* SceneDelegate.swift */; };
 		A46A6554299F2D530013FE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46A6553299F2D530013FE1C /* Assets.xcassets */; };
@@ -77,6 +84,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirlceLoadingView.swift; sourceTree = "<group>"; };
+		90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingLogo.swift; sourceTree = "<group>"; };
+		90BD7ECE299FC0FF00550533 /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
+		90BD7ED0299FC2CA00550533 /* ErrorViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModifier.swift; sourceTree = "<group>"; };
+		90BD7ED3299FC2FD00550533 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
+		90BD7ED5299FC52D00550533 /* ErrorAlertViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewModifier.swift; sourceTree = "<group>"; };
 		A46A6547299F2D510013FE1C /* MySweetMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySweetMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A654A299F2D510013FE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A46A654C299F2D510013FE1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +159,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90BD7EC5299FBF5300550533 /* RoundedCorner */ = {
+			isa = PBXGroup;
+			children = (
+				90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */,
+			);
+			path = RoundedCorner;
+			sourceTree = "<group>";
+		};
+		90BD7EC8299FBF8900550533 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		90BD7ECB299FBFA900550533 /* Animated */ = {
+			isa = PBXGroup;
+			children = (
+				90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */,
+			);
+			path = Animated;
+			sourceTree = "<group>";
+		};
+		90BD7ED2299FC2F000550533 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				90BD7ED3299FC2FD00550533 /* ErrorAlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		A46A653E299F2D510013FE1C = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +330,9 @@
 			children = (
 				A46A6598299F2FB30013FE1C /* AuthenticationModifier.swift */,
 				A46A6599299F2FB30013FE1C /* ViewDidLoadModifier.swift */,
+				90BD7ECE299FC0FF00550533 /* ToastViewModifier.swift */,
+				90BD7ED0299FC2CA00550533 /* ErrorViewModifier.swift */,
+				90BD7ED5299FC52D00550533 /* ErrorAlertViewModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -337,6 +386,10 @@
 		A46A65B5299F30B60013FE1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				90BD7ED2299FC2F000550533 /* Alert */,
+				90BD7ECB299FBFA900550533 /* Animated */,
+				90BD7EC8299FBF8900550533 /* Loading */,
+				90BD7EC5299FBF5300550533 /* RoundedCorner */,
 				A46A65B6299F30B60013FE1C /* LockView */,
 			);
 			path = View;
@@ -530,15 +583,21 @@
 			files = (
 				A46A65B1299F30240013FE1C /* Application.swift in Sources */,
 				A46A660A299F867B0013FE1C /* HomeViewModel.swift in Sources */,
+				90BD7ED1299FC2CA00550533 /* ErrorViewModifier.swift in Sources */,
+				90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */,
 				A46A65A1299F2FCC0013FE1C /* UIViewController+Extension.swift in Sources */,
 				A46A6608299F85240013FE1C /* HomeScreen.swift in Sources */,
 				A46A65A3299F2FCC0013FE1C /* Color+Extension.swift in Sources */,
 				A46A65A2299F2FCC0013FE1C /* String+Extension.swift in Sources */,
+				90BD7ED4299FC2FD00550533 /* ErrorAlertView.swift in Sources */,
 				A46A65A9299F2FD70013FE1C /* InternetManager.swift in Sources */,
+				90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */,
 				A46A65B8299F30B60013FE1C /* LockView.swift in Sources */,
 				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
+				90BD7ECF299FC0FF00550533 /* ToastViewModifier.swift in Sources */,
 				A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */,
 				A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */,
+				90BD7ED6299FC52D00550533 /* ErrorAlertViewModifier.swift in Sources */,
 				A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */,
 				A46A65B0299F30240013FE1C /* AppNavigator.swift in Sources */,
 				A46A65F5299F75710013FE1C /* ImageHelper.swift in Sources */,
@@ -548,6 +607,7 @@
 				A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */,
 				A46A659A299F2FB30013FE1C /* AuthenticationModifier.swift in Sources */,
 				A46A6593299F2F470013FE1C /* BaseNavigator.swift in Sources */,
+				90BD7ECA299FBF9400550533 /* CirlceLoadingView.swift in Sources */,
 				A46A65F3299F6F0E0013FE1C /* GenresManager.swift in Sources */,
 				A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */,
 			);
@@ -735,6 +795,7 @@
 				INFOPLIST_FILE = MySweetMovie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -762,6 +823,7 @@
 				INFOPLIST_FILE = MySweetMovie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -899,7 +961,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mandela02/SwiftUIExtension.git";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
 			};
 		};
@@ -907,7 +969,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mandela02/SwiftUtilities.git";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
 			};
 		};
@@ -915,7 +977,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mandela02/UnderlyingViewForSwiftUI.git";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 2.1.0;
 			};
 		};

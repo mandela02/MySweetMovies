@@ -13,3 +13,5 @@
 "locked" = "Locked";
 "scanFaceID" = "Scan faceID to open";
 
+"error" = "Error!";
+"cancel" = "Cancel";

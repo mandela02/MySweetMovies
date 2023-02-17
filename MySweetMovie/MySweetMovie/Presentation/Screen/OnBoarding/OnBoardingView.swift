@@ -16,8 +16,11 @@ struct OnBoardingView: View {
             .resizable()
             .scaledToFit()
             .frame(width: 200, height: 200, alignment: .center)
+            .foregroundColor(.white)
             .background {
-                Color.blackRussian
+                Image.splashBackdrop
+                    .resizable()
+                    .scaledToFill()
                     .ignoresSafeArea()
             }
             .viewDidLoad(initState: {

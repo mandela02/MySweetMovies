@@ -74,4 +74,6 @@ extension String {
     static var scanFaceID: String { String(localizedKey: "scanFaceID") }
     static var english: String { String(localizedKey: "english") }
     static var vietnamese: String { String(localizedKey: "vietnamese") }
+    static var error: String { String(localizedKey: "error") }
+    static var cancel: String { String(localizedKey: "cancel") }
 }

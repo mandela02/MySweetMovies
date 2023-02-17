@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mandela02/SwiftUIExtension.git",
       "state" : {
-        "revision" : "9f3ba9b1464833e28a23249820e10468b2009360",
-        "version" : "1.0.0"
+        "revision" : "4506f9c3f70d1077326013724423fc471980fc64",
+        "version" : "1.1.0"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mandela02/SwiftUtilities.git",
       "state" : {
-        "revision" : "02994a7ee1b4854e00e82d6699b1f6094d03591b",
-        "version" : "1.0.0"
+        "revision" : "749e382f44e026bfb2df0531fa9f87a1c1a72ab8",
+        "version" : "1.1.0"
       }
     },
     {

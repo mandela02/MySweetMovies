@@ -11,4 +11,10 @@ import IosUtilities
 
 extension Image {
     static let movieAndSpeaker = "tv.and.hifispeaker.fill".systemImage
+    static let splashBackdrop = "splashBackdrop".image
+    static let arrowCounterclockwise = "arrow.counterclockwise".systemImage
+
+    static let error = "error".image
+    static let warning = "warning".image
+    static let success = "success".image
 }
