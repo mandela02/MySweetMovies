@@ -11,9 +11,10 @@
 		A46A64E9299F28760013FE1C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = A46A64E6299F28760013FE1C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A46A6505299F2B0A0013FE1C /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46A6504299F2B0A0013FE1C /* Platform.framework */; };
 		A46A65C1299F30DA0013FE1C /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65BA299F30DA0013FE1C /* BaseUseCase.swift */; };
-		A46A65C2299F30DA0013FE1C /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65BD299F30DA0013FE1C /* LoginUseCase.swift */; };
 		A46A65C3299F30DA0013FE1C /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65BF299F30DA0013FE1C /* UseCaseProvider.swift */; };
 		A46A65C4299F30DA0013FE1C /* UseCaseProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65C0299F30DA0013FE1C /* UseCaseProviderProtocol.swift */; };
+		A46A65EE299F6B460013FE1C /* GetGenresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65ED299F6B460013FE1C /* GetGenresUseCase.swift */; };
+		A46A65F1299F6B580013FE1C /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F0299F6B580013FE1C /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +23,10 @@
 		A46A64E7299F28760013FE1C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		A46A6504299F2B0A0013FE1C /* Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46A65BA299F30DA0013FE1C /* BaseUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
-		A46A65BD299F30DA0013FE1C /* LoginUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A46A65BF299F30DA0013FE1C /* UseCaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		A46A65C0299F30DA0013FE1C /* UseCaseProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseProviderProtocol.swift; sourceTree = "<group>"; };
+		A46A65ED299F6B460013FE1C /* GetGenresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGenresUseCase.swift; sourceTree = "<group>"; };
+		A46A65F0299F6B580013FE1C /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		A46A64E5299F28760013FE1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A46A65EF299F6B4E0013FE1C /* Model */,
 				A46A65B9299F30DA0013FE1C /* Base */,
 				A46A65BB299F30DA0013FE1C /* UseCase */,
 				A46A65BE299F30DA0013FE1C /* UseCaseProvider */,
@@ -87,17 +90,17 @@
 		A46A65BB299F30DA0013FE1C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				A46A65BC299F30DA0013FE1C /* Login */,
+				A46A65BC299F30DA0013FE1C /* Genres */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		A46A65BC299F30DA0013FE1C /* Login */ = {
+		A46A65BC299F30DA0013FE1C /* Genres */ = {
 			isa = PBXGroup;
 			children = (
-				A46A65BD299F30DA0013FE1C /* LoginUseCase.swift */,
+				A46A65ED299F6B460013FE1C /* GetGenresUseCase.swift */,
 			);
-			path = Login;
+			path = Genres;
 			sourceTree = "<group>";
 		};
 		A46A65BE299F30DA0013FE1C /* UseCaseProvider */ = {
@@ -107,6 +110,14 @@
 				A46A65C0299F30DA0013FE1C /* UseCaseProviderProtocol.swift */,
 			);
 			path = UseCaseProvider;
+			sourceTree = "<group>";
+		};
+		A46A65EF299F6B4E0013FE1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A46A65F0299F6B580013FE1C /* Genre.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +202,9 @@
 				A46A65C3299F30DA0013FE1C /* UseCaseProvider.swift in Sources */,
 				A46A65C4299F30DA0013FE1C /* UseCaseProviderProtocol.swift in Sources */,
 				A46A65C1299F30DA0013FE1C /* BaseUseCase.swift in Sources */,
+				A46A65F1299F6B580013FE1C /* Genre.swift in Sources */,
+				A46A65EE299F6B460013FE1C /* GetGenresUseCase.swift in Sources */,
 				A46A64E8299F28760013FE1C /* Domain.docc in Sources */,
-				A46A65C2299F30DA0013FE1C /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

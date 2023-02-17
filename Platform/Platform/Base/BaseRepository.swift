@@ -15,5 +15,7 @@ public class BaseRepository<Data: Codable> {
 
     var endpoint: String
 
-    lazy var dataRepository = ApiRepository<DataEntity<Data>>(endpoint)
+    lazy var dataRepository = ApiRepository<BaseReponseEntity<Data>>(endpoint)
+    
+    var baseParam = ["api_key": String.key]
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol UseCaseProviderProtocol {
-    func loginUseCase() -> LoginUseCase
+    func getGenresUseCase() -> GetGenresUseCase
 }

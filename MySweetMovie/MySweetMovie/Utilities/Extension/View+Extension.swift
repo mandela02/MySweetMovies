@@ -14,6 +14,7 @@ extension View {
         self
             .environmentObject(Application.shared.internetManager)
             .environmentObject(Application.shared.biometricAuthenticationManager)
+            .environmentObject(Application.shared.genresManager)
     }
     
     func deviceAuthentication() -> some View {
