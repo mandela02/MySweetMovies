@@ -23,7 +23,7 @@ class MainTabBarViewController: UITabBarController {
         
         self.tabBar.tintColor = .englishDaisy
         self.tabBar.unselectedItemTintColor = .philipineGray
-        UIApplication.shared.addTapGestureRecognizer()
+        // UIApplication.shared.addTapGestureRecognizer()
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(setText),

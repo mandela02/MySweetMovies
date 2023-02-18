@@ -200,15 +200,16 @@ extension View {
     }
     
     @ViewBuilder
-    func bulrOverlay() -> some View {
-        self
-            .overlay(
-                Color.black
-                    .opacity(0.3)
-                    .background(
-                        .regularMaterial.opacity(0.3).blendMode(.color)
-                    )
-            )
+    func blurOverlay() -> some View {
+        ZStack {
+            self
+            Color.black
+                .ignoresSafeArea()
+                .opacity(0.8)
+                .background(
+                    .ultraThinMaterial
+                )
+        }
     }
 }
 

@@ -67,7 +67,18 @@ extension String {
     }
     
     var tmdbImage: String {
+        if self.isEmpty {
+            return self
+        }
         return "https://image.tmdb.org/t/p/w500\(self)"
+    }
+    
+    var tmdbOriginalImage: String {
+        if self.isEmpty {
+            return self
+        }
+
+        return "https://image.tmdb.org/t/p/original\(self)"
     }
 }
 
