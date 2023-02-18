@@ -276,7 +276,9 @@ extension MovieDetailScreen {
 // MARK: - Components
 extension MovieDetailScreen {
     private var buttonView: some View {
-        Button(action: {},
+        Button(action: {
+            viewModel.goToCheckout()
+        },
                label: {
             Text(String.orderNow)
                 .font(.system(size: 16, weight: .semibold))

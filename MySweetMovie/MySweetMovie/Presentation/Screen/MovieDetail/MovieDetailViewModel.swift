@@ -59,6 +59,10 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
         self.navigator.pop()
     }
     
+    func goToCheckout() {
+        navigator.goToCheckout()
+    }
+    
     struct State {
         var movieID: Int
         var loadingStatus: LoadingStatus = .initial

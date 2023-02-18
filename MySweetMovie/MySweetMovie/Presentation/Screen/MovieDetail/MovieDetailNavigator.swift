@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol MovieDetailNavigatorProtocol: BaseNavigator {
+    func goToCheckout()
 }
 
 struct MovieDetailNavigator: MovieDetailNavigatorProtocol {
@@ -17,4 +18,9 @@ struct MovieDetailNavigator: MovieDetailNavigatorProtocol {
     }
     
     var navigationController: UINavigationController
+    
+    func goToCheckout() {
+        let viewController = BaseViewController(rootView: CheckOutView())
+        self.navigationController.present(viewController, animated: true)
+    }
 }
