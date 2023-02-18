@@ -211,6 +211,18 @@ extension View {
                 )
         }
     }
+    
+    @ViewBuilder
+    func blurBackground() -> some View {
+        self.background(
+            Color.black
+                .ignoresSafeArea()
+                .opacity(0.8)
+                .background(
+                    .ultraThinMaterial
+                )
+        )
+    }
 }
 
 private struct SizePreferenceKey: PreferenceKey {

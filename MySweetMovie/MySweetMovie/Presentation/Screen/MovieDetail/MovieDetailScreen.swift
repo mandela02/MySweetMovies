@@ -29,7 +29,9 @@ struct MovieDetailScreen: View {
                     posterView
                         .padding(.bottom, 10)
                     overviewView
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 20)
+                    castsView
+                    SizedBox(height: 400)
                 }
             }
             .coordinateSpace(name: namedSpace)
@@ -167,6 +169,23 @@ extension MovieDetailScreen {
         }
         .padding(.horizontal, 10)
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var castsView: some View {
+        VStack(alignment: .leading) {
+            Text(String.cast)
+                .foregroundColor(.white)
+                .foregroundColor(.white)
+                .font(.system(size: 14, weight: .bold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 10)
+
+            ActorsView(actors: viewModel.state.detail?.casts ?? [])
+        }
+        .padding(.vertical, 20)
+        .background(
+            Color.shadowMountain.opacity(0.3)
+        )
     }
     
     @ViewBuilder

@@ -104,4 +104,6 @@ extension String {
     static var upcoming: String { String(localizedKey: "upcoming") }
     static var vote: String { String(localizedKey: "vote") }
     static var min: String { String(localizedKey: "min") }
+    static var cast: String { String(localizedKey: "cast") }
+    static var crews: String { String(localizedKey: "crews") }
 }
