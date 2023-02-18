@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90BBB8ED29A12F5D00C0CBD6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */; };
+		90BBB8F329A12FAB00C0CBD6 /* DiscoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */; };
+		90BBB8F629A12FD000C0CBD6 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */; };
+		90BBB8F829A12FE300C0CBD6 /* TvScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F729A12FE300C0CBD6 /* TvScreen.swift */; };
+		90BBB8FB29A1305D00C0CBD6 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8FA29A1305D00C0CBD6 /* UIApplication+Extension.swift */; };
+		90BBB8FD29A133A800C0CBD6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8FC29A133A800C0CBD6 /* UIImage+Extension.swift */; };
 		90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */; };
 		90BD7ECA299FBF9400550533 /* CirlceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */; };
 		90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */; };
@@ -55,7 +61,7 @@
 		A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B2299F30540013FE1C /* OnBoardingView.swift */; };
 		A46A65B8299F30B60013FE1C /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65B7299F30B60013FE1C /* LockView.swift */; };
 		A46A65DB299F33F00013FE1C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46A65DD299F33F00013FE1C /* Localizable.strings */; };
-		A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65E3299F61F60013FE1C /* SettingScreen.swift */; };
+		A46A65E4299F61F60013FE1C /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65E3299F61F60013FE1C /* SettingsScreen.swift */; };
 		A46A65F3299F6F0E0013FE1C /* GenresManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F2299F6F0E0013FE1C /* GenresManager.swift */; };
 		A46A65F5299F75710013FE1C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A65F4299F75710013FE1C /* ImageHelper.swift */; };
 		A46A6608299F85240013FE1C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A6607299F85240013FE1C /* HomeScreen.swift */; };
@@ -95,6 +101,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScreen.swift; sourceTree = "<group>"; };
+		90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		90BBB8F729A12FE300C0CBD6 /* TvScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvScreen.swift; sourceTree = "<group>"; };
+		90BBB8FA29A1305D00C0CBD6 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		90BBB8FC29A133A800C0CBD6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirlceLoadingView.swift; sourceTree = "<group>"; };
 		90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingLogo.swift; sourceTree = "<group>"; };
@@ -142,7 +154,7 @@
 		A46A65DA299F33E00013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A46A65DC299F33F00013FE1C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A46A65DE299F33F30013FE1C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A46A65E3299F61F60013FE1C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		A46A65E3299F61F60013FE1C /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		A46A65F2299F6F0E0013FE1C /* GenresManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresManager.swift; sourceTree = "<group>"; };
 		A46A65F4299F75710013FE1C /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		A46A6607299F85240013FE1C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -181,6 +193,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90BBB8EB29A12F4E00C0CBD6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		90BBB8EE29A12F6700C0CBD6 /* Tv */ = {
+			isa = PBXGroup;
+			children = (
+				90BBB8F729A12FE300C0CBD6 /* TvScreen.swift */,
+			);
+			path = Tv;
+			sourceTree = "<group>";
+		};
+		90BBB8EF29A12F7A00C0CBD6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		90BBB8F029A12F7E00C0CBD6 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 		90BD7EC5299FBF5300550533 /* RoundedCorner */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,8 +347,12 @@
 		A46A658B299F2EAA0013FE1C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				90BBB8F029A12F7E00C0CBD6 /* Discover */,
+				90BBB8EF29A12F7A00C0CBD6 /* Search */,
+				90BBB8EE29A12F6700C0CBD6 /* Tv */,
+				90BBB8EB29A12F4E00C0CBD6 /* TabBar */,
 				A46A6606299F85190013FE1C /* Home */,
-				A46A65E2299F61EA0013FE1C /* Setting */,
+				A46A65E2299F61EA0013FE1C /* Settings */,
 				A46A65B4299F30580013FE1C /* OnBoarding */,
 				A46A658C299F2EBE0013FE1C /* Launch */,
 			);
@@ -395,6 +443,8 @@
 				A46A659F299F2FCC0013FE1C /* Color+Extension.swift */,
 				A46A65A0299F2FCC0013FE1C /* View+Extension.swift */,
 				90BD7EF9299FEBEC00550533 /* UIColor+Extension.swift */,
+				90BBB8FA29A1305D00C0CBD6 /* UIApplication+Extension.swift */,
+				90BBB8FC29A133A800C0CBD6 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -476,12 +526,12 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
-		A46A65E2299F61EA0013FE1C /* Setting */ = {
+		A46A65E2299F61EA0013FE1C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				A46A65E3299F61F60013FE1C /* SettingScreen.swift */,
+				A46A65E3299F61F60013FE1C /* SettingsScreen.swift */,
 			);
-			path = Setting;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		A46A6606299F85190013FE1C /* Home */ = {
@@ -640,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46A65B1299F30240013FE1C /* Application.swift in Sources */,
+				90BBB8F629A12FD000C0CBD6 /* SearchScreen.swift in Sources */,
 				A46A660A299F867B0013FE1C /* HomeViewModel.swift in Sources */,
 				90BD7ED1299FC2CA00550533 /* ErrorViewModifier.swift in Sources */,
 				90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */,
@@ -649,10 +700,14 @@
 				90BD7EE9299FD83200550533 /* BaseCollectionViewCell.swift in Sources */,
 				90BD7EE5299FD64E00550533 /* NetworkImage.swift in Sources */,
 				A46A65A2299F2FCC0013FE1C /* String+Extension.swift in Sources */,
+				90BBB8ED29A12F5D00C0CBD6 /* TabBarViewController.swift in Sources */,
 				90BD7EDF299FD4BA00550533 /* BigMovieCollectionViewCell.swift in Sources */,
 				90BD7EEB299FDB1500550533 /* SmallMovieCollectionViewCell.swift in Sources */,
 				90BD7ED4299FC2FD00550533 /* ErrorAlertView.swift in Sources */,
+				90BBB8F829A12FE300C0CBD6 /* TvScreen.swift in Sources */,
+				90BBB8F329A12FAB00C0CBD6 /* DiscoverScreen.swift in Sources */,
 				A46A65A9299F2FD70013FE1C /* InternetManager.swift in Sources */,
+				90BBB8FB29A1305D00C0CBD6 /* UIApplication+Extension.swift in Sources */,
 				90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */,
 				A46A65B8299F30B60013FE1C /* LockView.swift in Sources */,
 				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
@@ -665,6 +720,7 @@
 				A46A65B3299F30540013FE1C /* OnBoardingView.swift in Sources */,
 				A46A65B0299F30240013FE1C /* AppNavigator.swift in Sources */,
 				A46A65F5299F75710013FE1C /* ImageHelper.swift in Sources */,
+				90BBB8FD29A133A800C0CBD6 /* UIImage+Extension.swift in Sources */,
 				A46A659B299F2FB30013FE1C /* ViewDidLoadModifier.swift in Sources */,
 				A46A654B299F2D510013FE1C /* AppDelegate.swift in Sources */,
 				A46A65A4299F2FCC0013FE1C /* View+Extension.swift in Sources */,
@@ -675,7 +731,7 @@
 				90BD7EFA299FEBEC00550533 /* UIColor+Extension.swift in Sources */,
 				90BD7ECA299FBF9400550533 /* CirlceLoadingView.swift in Sources */,
 				A46A65F3299F6F0E0013FE1C /* GenresManager.swift in Sources */,
-				A46A65E4299F61F60013FE1C /* SettingScreen.swift in Sources */,
+				A46A65E4299F61F60013FE1C /* SettingsScreen.swift in Sources */,
 				90BD7EDD299FCF7800550533 /* LayoutBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

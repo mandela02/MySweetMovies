@@ -85,4 +85,9 @@ extension String {
     static var viewAll: String { String(localizedKey: "viewAll") }
     static var trending: String { String(localizedKey: "trending") }
     static var topRated: String { String(localizedKey: "topRated") }
+    static var movie: String { String(localizedKey: "movie") }
+    static var tv: String { String(localizedKey: "tv") }
+    static var search: String { String(localizedKey: "search") }
+    static var discover: String { String(localizedKey: "discover") }
+    static var setting: String { String(localizedKey: "setting") }
 }

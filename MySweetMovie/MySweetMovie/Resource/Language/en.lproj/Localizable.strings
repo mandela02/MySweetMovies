@@ -21,3 +21,9 @@
 "viewAll" = "View All";
 "trending" = "Trending";
 "topRated" = "Top Rated";
+
+"movie" = "Movie";
+"tv" = "TV";
+"search" = "Search";
+"discover" = "Discover";
+"setting" = "Settings";
