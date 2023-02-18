@@ -9,15 +9,16 @@ import Foundation
 import SwiftUI
 import Domain
 
-struct ActorsView: View {
-    let actors: [Credit]
+struct CreditsView: View {
+    let credits: [Credit]
+    let isActor: Bool
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 Color.clear.frame(width: 10)
                 LazyHStack(spacing: 10) {
-                    ForEach(actors) { actor in
+                    ForEach(credits) { actor in
                         buildCreditView(credit: actor)
                     }
                 }
@@ -35,7 +36,7 @@ struct ActorsView: View {
                     .font(.system(size: 12, weight: .semibold))
                     .foregroundColor(.white)
                 
-                Text(credit.character)
+                Text(isActor ? credit.character : credit.job)
                     .font(.system(size: 10, weight: .semibold))
                     .foregroundColor(.philipineGray)
             }

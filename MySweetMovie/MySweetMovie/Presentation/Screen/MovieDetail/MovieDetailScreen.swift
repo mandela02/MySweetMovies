@@ -31,6 +31,8 @@ struct MovieDetailScreen: View {
                     overviewView
                         .padding(.bottom, 20)
                     castsView
+                        .padding(.bottom, 20)
+                    crewsView
                     SizedBox(height: 400)
                 }
             }
@@ -180,7 +182,7 @@ extension MovieDetailScreen {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 10)
 
-            ActorsView(actors: viewModel.state.detail?.casts ?? [])
+            CreditsView(credits: viewModel.state.detail?.casts ?? [], isActor: true)
         }
         .padding(.vertical, 20)
         .background(
@@ -188,6 +190,23 @@ extension MovieDetailScreen {
         )
     }
     
+    private var crewsView: some View {
+        VStack(alignment: .leading) {
+            Text(String.crews)
+                .foregroundColor(.white)
+                .foregroundColor(.white)
+                .font(.system(size: 14, weight: .bold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 10)
+
+            CreditsView(credits: viewModel.state.detail?.crews ?? [], isActor: false)
+        }
+        .padding(.vertical, 20)
+        .background(
+            Color.shadowMountain.opacity(0.3)
+        )
+    }
+
     @ViewBuilder
     private var headerImagesView: some View {
         GeometryReader { proxy in

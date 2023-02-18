@@ -66,8 +66,8 @@ extension MovieDetailEntity {
                     voteCount: voteCount ?? -1,
                     backdrops: images?.backdrops?.map { $0.toModel } ?? [],
                     posters: images?.posters?.map { $0.toModel } ?? [],
-                    casts: credits?.cast?.map { $0.toModel } ?? [],
-                    crews: credits?.crew?.map { $0.toModel } ?? [])
+                    casts: credits?.cast?.sorted(by: { ($0.popularity ?? 0) > ($1.popularity ?? 0) }).map { $0.toModel } ?? [],
+                    crews: credits?.crew?.sorted(by: { ($0.popularity ?? 0) > ($1.popularity ?? 0) }).map { $0.toModel } ?? [])
     }
 }
 
