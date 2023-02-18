@@ -31,6 +31,8 @@ struct MovieDetailScreen: View {
                         .padding(.bottom, 20)
                     posterView
                         .padding(.bottom, 10)
+                    buttonView
+                        .padding(.bottom, 10)
                     overviewView
                         .padding(.bottom, 20)
                     castsView
@@ -273,6 +275,23 @@ extension MovieDetailScreen {
 
 // MARK: - Components
 extension MovieDetailScreen {
+    private var buttonView: some View {
+        Button(action: {},
+               label: {
+            Text(String.orderNow)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundColor(.blackRussian)
+                .padding(.vertical, 12)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background {
+                    Color.englishDaisy
+                }
+        })
+        .plainButton
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .padding(.horizontal, 10)
+    }
+    
     @ViewBuilder
     private var headerImagesView: some View {
         GeometryReader { proxy in
