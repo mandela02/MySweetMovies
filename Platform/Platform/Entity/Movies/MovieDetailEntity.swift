@@ -13,17 +13,17 @@ public struct MovieDetailEntity: Codable {
     public let backdropPath: String?
     public let belongsToCollection: MovieCollectionEntity?
     public let budget: Int?
-    public let genres: [GenresEntity]?
+    public let genres: [GenreEntity]?
     public let homepage: String?
     public let id: Int?
     public let imdbID, originalLanguage, originalTitle, overview: String?
     public let popularity: Double?
     public let posterPath: String?
-    public let productionCompanies: [ProductionCompany]?
-    public let productionCountries: [ProductionCountry]?
+    public let productionCompanies: [ProductionCompanyEntity]?
+    public let productionCountries: [ProductionCountryEntity]?
     public let releaseDate: String?
     public let revenue, runtime: Int?
-    public let spokenLanguages: [SpokenLanguage]?
+    public let spokenLanguages: [SpokenLanguageEntity]?
     public let status, tagline, title: String?
     public let video: Bool?
     public let voteAverage: Double?
@@ -65,7 +65,7 @@ public struct MovieCreditsEntity: Codable {
 }
 
 // MARK: - ProductionCompany
-public struct ProductionCompany: Codable {
+public struct ProductionCompanyEntity: Codable {
     public let id: Int?
     public let logoPath: String?
     public let name, originCountry: String?
@@ -79,7 +79,7 @@ public struct ProductionCompany: Codable {
 }
 
 // MARK: - ProductionCountry
-public struct ProductionCountry: Codable {
+public struct ProductionCountryEntity: Codable {
     public let name: String?
 
     public enum CodingKeys: String, CodingKey {
@@ -88,10 +88,10 @@ public struct ProductionCountry: Codable {
 }
 
 // MARK: - SpokenLanguage
-public struct SpokenLanguage: Codable {
-    let englishName, name: String?
+public struct SpokenLanguageEntity: Codable {
+    public let englishName, name: String?
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case englishName = "english_name"
         case name
     }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		90BBB8FF29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8FE29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift */; };
+		90BBB91F29A154D400C0CBD6 /* MovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB91E29A154D400C0CBD6 /* MovieImage.swift */; };
+		90BBB92129A1555D00C0CBD6 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92029A1555D00C0CBD6 /* Credit.swift */; };
+		90BBB92329A159D100C0CBD6 /* MovieCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92229A159D100C0CBD6 /* MovieCollection.swift */; };
+		90BBB92529A15A2500C0CBD6 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92429A15A2500C0CBD6 /* MovieDetail.swift */; };
+		90BBB92729A15D1100C0CBD6 /* GetMovieDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92629A15D1100C0CBD6 /* GetMovieDetailUseCase.swift */; };
 		90BD7EED299FDD4D00550533 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EEC299FDD4D00550533 /* HomeData.swift */; };
 		90BD7EEF299FDD7B00550533 /* GetHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */; };
 		90BD7EF6299FE79A00550533 /* GetMoviesByGenresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */; };
@@ -27,6 +32,11 @@
 
 /* Begin PBXFileReference section */
 		90BBB8FE29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesByGenreUseCase.swift; sourceTree = "<group>"; };
+		90BBB91E29A154D400C0CBD6 /* MovieImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImage.swift; sourceTree = "<group>"; };
+		90BBB92029A1555D00C0CBD6 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		90BBB92229A159D100C0CBD6 /* MovieCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollection.swift; sourceTree = "<group>"; };
+		90BBB92429A15A2500C0CBD6 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		90BBB92629A15D1100C0CBD6 /* GetMovieDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieDetailUseCase.swift; sourceTree = "<group>"; };
 		90BD7EEC299FDD4D00550533 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeUseCase.swift; sourceTree = "<group>"; };
 		90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesByGenresUseCase.swift; sourceTree = "<group>"; };
@@ -136,6 +146,10 @@
 				A46A65F0299F6B580013FE1C /* Genre.swift */,
 				A46A65FC299F7F890013FE1C /* Movies.swift */,
 				90BD7EEC299FDD4D00550533 /* HomeData.swift */,
+				90BBB91E29A154D400C0CBD6 /* MovieImage.swift */,
+				90BBB92029A1555D00C0CBD6 /* Credit.swift */,
+				90BBB92229A159D100C0CBD6 /* MovieCollection.swift */,
+				90BBB92429A15A2500C0CBD6 /* MovieDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +170,7 @@
 				90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */,
 				90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */,
 				90BBB8FE29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift */,
+				90BBB92629A15D1100C0CBD6 /* GetMovieDetailUseCase.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -239,13 +254,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BBB92729A15D1100C0CBD6 /* GetMovieDetailUseCase.swift in Sources */,
 				90BBB8FF29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift in Sources */,
 				A46A6605299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift in Sources */,
+				90BBB92129A1555D00C0CBD6 /* Credit.swift in Sources */,
+				90BBB92529A15A2500C0CBD6 /* MovieDetail.swift in Sources */,
+				90BBB92329A159D100C0CBD6 /* MovieCollection.swift in Sources */,
 				90BD7EEF299FDD7B00550533 /* GetHomeUseCase.swift in Sources */,
 				A46A65FD299F7F890013FE1C /* Movies.swift in Sources */,
 				A46A6602299F821B0013FE1C /* String+Extension.swift in Sources */,
 				A46A65C3299F30DA0013FE1C /* UseCaseProvider.swift in Sources */,
 				A46A65C4299F30DA0013FE1C /* UseCaseProviderProtocol.swift in Sources */,
+				90BBB91F29A154D400C0CBD6 /* MovieImage.swift in Sources */,
 				A46A65C1299F30DA0013FE1C /* BaseUseCase.swift in Sources */,
 				90BD7EF6299FE79A00550533 /* GetMoviesByGenresUseCase.swift in Sources */,
 				A46A65F1299F6B580013FE1C /* Genre.swift in Sources */,

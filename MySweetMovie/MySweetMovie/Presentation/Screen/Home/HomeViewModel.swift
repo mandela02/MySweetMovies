@@ -76,8 +76,8 @@ class HomeViewModel: BaseViewModel<HomeViewModel.State> {
         self.navigator.goToList(kind: kind)
     }
     
-    func goToMovie() {
-        self.navigator.goToMovie()
+    func goToMovie(movieID: Int) {
+        self.navigator.goToMovie(movieID: movieID)
     }
     
     enum SectionType {

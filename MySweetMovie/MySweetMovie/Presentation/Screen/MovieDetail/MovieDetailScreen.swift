@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct MovieDetailScreen: View {
+    @StateObject
+    var viewModel: MovieDetailViewModel
+    
     var body: some View {
         ZStack {
             Image.splashBackdrop
@@ -16,5 +19,7 @@ struct MovieDetailScreen: View {
                 .scaledToFill()
                 .ignoresSafeArea()
         }
+        .blackBackground()
+        .viewDidLoad(initState: viewModel.fetchDataFromApi)
     }
 }

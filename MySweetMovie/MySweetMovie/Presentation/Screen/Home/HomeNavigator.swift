@@ -11,7 +11,7 @@ import UIKit
 
 protocol HomeNavigatorProtocol: BaseNavigator {
     func goToList(kind: MovieListKind)
-    func goToMovie()
+    func goToMovie(movieID: Int)
 }
 
 struct HomeNavigator: HomeNavigatorProtocol {
@@ -36,8 +36,14 @@ struct HomeNavigator: HomeNavigatorProtocol {
         self.navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToMovie() {
-        let view = MovieDetailScreen()
+    @MainActor
+    func goToMovie(movieID: Int) {
+        let getMovieDetailUseCase = Application.shared.userCaseProvider.getMovieDetailUseCase()
+        
+        let viewModel = MovieDetailViewModel(id: movieID,
+                                             getMovieDetailUseCase: getMovieDetailUseCase)
+        
+        let view = MovieDetailScreen(viewModel: viewModel)
         let viewController = BaseViewController(rootView: view)
         self.navigationController.pushViewController(viewController, animated: true)
     }

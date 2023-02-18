@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Platform
 
 public struct Genres {
     public let movieGenres: [Genre]
@@ -19,4 +20,10 @@ public struct Genre: Identifiable, Equatable {
 
     public let id: Int
     public let name: String
+}
+
+extension GenreEntity {
+    var toModel: Genre {
+        Genre(id: id ?? -1, name: name ?? "")
+    }
 }

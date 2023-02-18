@@ -16,4 +16,5 @@ public class RepositoryProvider {
     
     public lazy var genresRepository = GenresRepository(endpoint: self.apiEndpoint)
     public lazy var moviesRepository = MoviesRepository(endpoint: self.apiEndpoint)
+    public lazy var movieDetailRepository = MovieDetailRepository(endpoint: self.apiEndpoint)
 }
