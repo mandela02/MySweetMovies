@@ -23,10 +23,13 @@ struct MovieDetailScreen: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: .leastNonzeroMagnitude) {
                     headerView
-                    Color.clear.frame(height: 10)
+                        .padding(.bottom, 10)
                     nameView
-                    Color.clear.frame(height: 20)
+                        .padding(.bottom, 20)
                     posterView
+                        .padding(.bottom, 10)
+                    overviewView
+                        .padding(.bottom, 10)
                 }
             }
             .coordinateSpace(name: namedSpace)
@@ -60,28 +63,30 @@ extension MovieDetailScreen {
         ZStack(alignment: .bottom) {
             headerImagesView
             
-            HStack {
-                Text(viewModel.state.detail?.releaseDate.year.asString ?? Date().year.asString)
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundColor(.white)
-                    .padding(.vertical, 5)
-                    .padding(.horizontal, 10)
-                    .backgroundColor(.roseBonbon)
-                    .clipShape(Capsule())
-                
-                Spacer()
-                
-                VStack(alignment: .trailing, spacing: 5) {
-                    RateView(rate: viewModel.state.detail?.voteAverage ?? 0, size: 10)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(viewModel.state.detail?.releaseDate.year.asString ?? Date().year.asString)
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(.white)
+                        .padding(.vertical, 5)
+                        .padding(.horizontal, 10)
+                        .backgroundColor(.roseBonbon)
+                        .clipShape(Capsule())
                     
-                    Text((viewModel.state.detail?.voteCount ?? 0).asString + " " + .vote)
-                        .foregroundColor(.philipineGray)
-                        .font(.system(size: 14, weight: .semibold))
+                    Spacer()
+                    
+                    VStack(alignment: .trailing, spacing: 5) {
+                        RateView(rate: viewModel.state.detail?.voteAverage ?? 0, size: 10)
+                        
+                        Text((viewModel.state.detail?.voteCount ?? 0).asString + " " + .vote)
+                            .foregroundColor(.philipineGray)
+                            .font(.system(size: 14, weight: .semibold))
+                    }
+                    
+                    Text(viewModel.state.detail?.voteAverage.oneDigitString ?? "")
+                        .font(.system(size: 40, weight: .regular))
+                        .foregroundColor(.white)
                 }
-                
-                Text(viewModel.state.detail?.voteAverage.oneDigitString ?? "")
-                    .font(.system(size: 40, weight: .regular))
-                    .foregroundColor(.white)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 5)
@@ -106,23 +111,29 @@ extension MovieDetailScreen {
                 .foregroundColor(.philipineGray)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 10)
     }
     
     private var posterView: some View {
         let imageWidth = (width / 2 - 40).alwaysPositive
         
         return HStack(alignment: .top) {
-            Label {
-                Text("\((viewModel.state.detail?.runtime ?? 0).asString) \(.min)")
-                    .foregroundColor(.white)
-                    .font(.system(size: 14, weight: .regular))
-            } icon: {
-                Image.clockCircle
-                    .resizable()
-                    .foregroundColor(.roseBonbon)
-                    .aspectRatio(1, contentMode: .fill)
-                    .frame(width: 16, height: 16)
+            VStack(alignment: .leading) {
+                Label {
+                    Text("\((viewModel.state.detail?.runtime ?? 0).asString) \(.min)")
+                        .foregroundColor(.white)
+                        .font(.system(size: 14, weight: .regular))
+                } icon: {
+                    Image.clockCircle
+                        .resizable()
+                        .foregroundColor(.roseBonbon)
+                        .aspectRatio(1, contentMode: .fill)
+                        .frame(width: 16, height: 16)
+                }
+                .padding(.leading, 4)
+                
+                CloudyTagView(tags: viewModel.state.detail?.tags ?? [],
+                              selected: .constant(""))
             }
             
             Spacer()
@@ -138,7 +149,24 @@ extension MovieDetailScreen {
             .frame(width: imageWidth, height: imageWidth * 3 / 2)
             .cornerRadius(8)
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 10)
+    }
+    
+    private var overviewView: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            if let tagLine = viewModel.state.detail?.tagline {
+                Text(tagLine)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .bold))
+            }
+            
+            Text(viewModel.state.detail?.overview ?? "")
+                .font(.system(size: 12, weight: .regular))
+                .foregroundColor(.white)
+                .multilineTextAlignment(.leading)
+        }
+        .padding(.horizontal, 10)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     @ViewBuilder

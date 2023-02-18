@@ -32,6 +32,10 @@ public struct MovieDetail: Identifiable {
     public let posters: [MovieImage]
     public let casts: [Credit]
     public let crews: [Credit]
+    
+    public var tags: [String] {
+        self.genres.map { $0.name }
+    }
 }
 
 extension MovieDetailEntity {

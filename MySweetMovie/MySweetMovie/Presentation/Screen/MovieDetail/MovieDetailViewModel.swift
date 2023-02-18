@@ -17,6 +17,17 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
          getMovieDetailUseCase: GetMovieDetailUseCase) {
         self.getMovieDetailUseCase = getMovieDetailUseCase
         super.init(state: State(movieID: id))
+        
+        NotificationCenter.default.publisher(for: .languageDidChange)
+            .map { _ in }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] value in
+                guard let self = self else { return }
+                Task { @MainActor in
+                    await self.fetchDataFromApi()
+                }
+            })
+            .store(in: &cancellables)
     }
     
     private let getMovieDetailUseCase: GetMovieDetailUseCase

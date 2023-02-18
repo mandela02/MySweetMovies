@@ -22,6 +22,7 @@
 		90BBB91029A14E7A00C0CBD6 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB90F29A14E7A00C0CBD6 /* MovieDetailViewModel.swift */; };
 		90BBB92A29A16C2E00C0CBD6 /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92929A16C2E00C0CBD6 /* RateView.swift */; };
 		90BBB92C29A1706500C0CBD6 /* CGFLoat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92B29A1706500C0CBD6 /* CGFLoat+Extension.swift */; };
+		90BBB92F29A170F400C0CBD6 /* CloudyTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB92E29A170F400C0CBD6 /* CloudyTagsView.swift */; };
 		90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */; };
 		90BD7ECA299FBF9400550533 /* CirlceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */; };
 		90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */; };
@@ -125,6 +126,7 @@
 		90BBB90F29A14E7A00C0CBD6 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		90BBB92929A16C2E00C0CBD6 /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		90BBB92B29A1706500C0CBD6 /* CGFLoat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFLoat+Extension.swift"; sourceTree = "<group>"; };
+		90BBB92E29A170F400C0CBD6 /* CloudyTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTagsView.swift; sourceTree = "<group>"; };
 		90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirlceLoadingView.swift; sourceTree = "<group>"; };
 		90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingLogo.swift; sourceTree = "<group>"; };
@@ -268,6 +270,14 @@
 				90BBB92929A16C2E00C0CBD6 /* RateView.swift */,
 			);
 			path = Rate;
+			sourceTree = "<group>";
+		};
+		90BBB92D29A170E800C0CBD6 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				90BBB92E29A170F400C0CBD6 /* CloudyTagsView.swift */,
+			);
+			path = Tags;
 			sourceTree = "<group>";
 		};
 		90BD7EC5299FBF5300550533 /* RoundedCorner */ = {
@@ -536,6 +546,7 @@
 		A46A65B5299F30B60013FE1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				90BBB92D29A170E800C0CBD6 /* Tags */,
 				90BBB92829A16C2500C0CBD6 /* Rate */,
 				90BD7EF2299FDFF500550533 /* Button */,
 				90BD7EE3299FD64400550533 /* Image */,
@@ -771,6 +782,7 @@
 				A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */,
 				90BBB90929A1464200C0CBD6 /* MovieListNavigator.swift in Sources */,
 				90BD7EF4299FE00000550533 /* UnderlineButton.swift in Sources */,
+				90BBB92F29A170F400C0CBD6 /* CloudyTagsView.swift in Sources */,
 				90BD7EF1299FDFCD00550533 /* HeaderView.swift in Sources */,
 				A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */,
 				90BD7ED6299FC52D00550533 /* ErrorAlertViewModifier.swift in Sources */,
