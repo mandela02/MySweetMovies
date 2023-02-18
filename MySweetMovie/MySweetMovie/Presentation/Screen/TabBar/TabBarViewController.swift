@@ -24,6 +24,11 @@ class MainTabBarViewController: UITabBarController {
         self.tabBar.tintColor = .englishDaisy
         self.tabBar.unselectedItemTintColor = .philipineGray
         UIApplication.shared.addTapGestureRecognizer()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(setText),
+                                               name: .languageDidChange,
+                                               object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +40,14 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidAppear(animated)
     }
     
+    @objc func setText() {
+        tabBar.items?[safe: Tab.movies.rawValue]?.title = .movie
+        tabBar.items?[safe: Tab.tvs.rawValue]?.title = .tv
+        tabBar.items?[safe: Tab.search.rawValue]?.title = .search
+        tabBar.items?[safe: Tab.discover.rawValue]?.title = .discover
+        tabBar.items?[safe: Tab.setting.rawValue]?.title = .setting
+    }
+
     private func setupTabBar() {
         self.viewControllers = [buildMovie(),
                                 buildTv(),
