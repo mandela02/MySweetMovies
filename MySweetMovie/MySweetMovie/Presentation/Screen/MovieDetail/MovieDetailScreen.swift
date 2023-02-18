@@ -17,6 +17,9 @@ struct MovieDetailScreen: View {
     
     @State
     private var width: CGFloat = .leastNonzeroMagnitude
+    
+    @State
+    private var shouldShowNavigationBar = false
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -42,14 +45,7 @@ struct MovieDetailScreen: View {
             .coordinateSpace(name: namedSpace)
             .ignoresSafeArea(.container, edges: .vertical)
             
-            ZStack {
-                IconButton(icon: .chevronLeft,
-                           action: {})
-                .foregroundColor(.white)
-            }
-            .padding(.horizontal, 20)
-            .frame(height: 44)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            navigationView
         }
         .background(
             backgroundView
@@ -63,10 +59,38 @@ struct MovieDetailScreen: View {
         .reload(loadingStatus: $viewModel.state.loadingStatus,
                 onRefresh: viewModel.fetchDataFromApi)
         .errorView(loadingStatus: $viewModel.state.loadingStatus)
+        .animation(.easeInOut, value: shouldShowNavigationBar)
     }
 }
 
 extension MovieDetailScreen {
+    private var navigationView: some View {
+        HStack(spacing: 14) {
+            IconButton(icon: .chevronLeft,
+                       action: {
+                viewModel.goBack()
+            })
+            .foregroundColor(.white)
+
+            if shouldShowNavigationBar {
+                Text(viewModel.state.detail?.title ?? "")
+                    .foregroundColor(.white)
+                    .font(.system(size: 20, weight: .bold))
+                    .padding(.leading, 20)
+            }
+            Spacer()
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 10)
+        .background(
+            (
+                shouldShowNavigationBar ?
+                Color.eerieBlack : Color.clear
+            )
+            .ignoresSafeArea(.container, edges: .top)
+        )
+    }
+
     private var headerView: some View {
         ZStack(alignment: .bottom) {
             headerImagesView
@@ -269,7 +293,7 @@ extension MovieDetailScreen {
                    alignment: .top)
             .offset(y: -minY)
             .onChange(of: height) { newValue in
-                // viewModel.toggleNavigationBar(value: height < 0)
+                shouldShowNavigationBar = height < 0
             }
             .onAppear(perform: {
                 width = proxy.size.width

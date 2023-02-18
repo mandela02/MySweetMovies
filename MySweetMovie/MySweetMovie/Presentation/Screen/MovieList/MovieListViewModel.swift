@@ -133,6 +133,10 @@ class MovieListViewModel: BaseViewModel<MovieListViewModel.State> {
         self.navigator.pop()
     }
     
+    func goToMovie(movieID: Int) {
+        self.navigator.goToMovie(movieID: movieID)
+    }
+    
     struct State {
         var kind: MovieListKind
         var loadingStatus: LoadingStatus = .initial

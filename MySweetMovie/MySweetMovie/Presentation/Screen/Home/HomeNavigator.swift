@@ -38,9 +38,11 @@ struct HomeNavigator: HomeNavigatorProtocol {
     
     @MainActor
     func goToMovie(movieID: Int) {
+        let navigator = MovieDetailNavigator(navigationController: self.navigationController)
         let getMovieDetailUseCase = Application.shared.userCaseProvider.getMovieDetailUseCase()
         
         let viewModel = MovieDetailViewModel(id: movieID,
+                                             navigator: navigator,
                                              getMovieDetailUseCase: getMovieDetailUseCase)
         
         let view = MovieDetailScreen(viewModel: viewModel)

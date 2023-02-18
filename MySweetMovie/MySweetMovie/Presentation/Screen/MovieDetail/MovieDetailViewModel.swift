@@ -14,8 +14,10 @@ import IosUtilities
 class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
     
     init(id: Int,
+         navigator: MovieDetailNavigatorProtocol,
          getMovieDetailUseCase: GetMovieDetailUseCase) {
         self.getMovieDetailUseCase = getMovieDetailUseCase
+        self.navigator = navigator
         super.init(state: State(movieID: id))
         
         NotificationCenter.default.publisher(for: .languageDidChange)
@@ -29,6 +31,8 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
             })
             .store(in: &cancellables)
     }
+    
+    private let navigator: MovieDetailNavigatorProtocol
     
     private let getMovieDetailUseCase: GetMovieDetailUseCase
     
@@ -49,6 +53,10 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
         } catch {
             state.loadingStatus = .error(error.localizedDescription)
         }
+    }
+    
+    func goBack() {
+        self.navigator.pop()
     }
     
     struct State {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90463E2329A17DCF00AB6728 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90463E2229A17DCF00AB6728 /* MoviesView.swift */; };
+		90463E2529A1812E00AB6728 /* MovieDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90463E2429A1812E00AB6728 /* MovieDetailNavigator.swift */; };
 		90BBB8ED29A12F5D00C0CBD6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */; };
 		90BBB8F329A12FAB00C0CBD6 /* DiscoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */; };
 		90BBB8F629A12FD000C0CBD6 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */; };
@@ -114,6 +115,7 @@
 
 /* Begin PBXFileReference section */
 		90463E2229A17DCF00AB6728 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		90463E2429A1812E00AB6728 /* MovieDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailNavigator.swift; sourceTree = "<group>"; };
 		90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScreen.swift; sourceTree = "<group>"; };
 		90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				90BBB93029A1756800C0CBD6 /* Views */,
 				90BBB90D29A14B4C00C0CBD6 /* MovieDetailScreen.swift */,
 				90BBB90F29A14E7A00C0CBD6 /* MovieDetailViewModel.swift */,
+				90463E2429A1812E00AB6728 /* MovieDetailNavigator.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				90463E2329A17DCF00AB6728 /* MoviesView.swift in Sources */,
 				A46A65B8299F30B60013FE1C /* LockView.swift in Sources */,
 				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
+				90463E2529A1812E00AB6728 /* MovieDetailNavigator.swift in Sources */,
 				90BD7ECF299FC0FF00550533 /* ToastViewModifier.swift in Sources */,
 				A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */,
 				90BBB90929A1464200C0CBD6 /* MovieListNavigator.swift in Sources */,
