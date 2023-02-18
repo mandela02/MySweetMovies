@@ -32,6 +32,7 @@ public struct MovieDetail: Identifiable {
     public let posters: [MovieImage]
     public let casts: [Credit]
     public let crews: [Credit]
+    public let similars: [Movie]
     
     public var tags: [String] {
         self.genres.map { $0.name }
@@ -67,7 +68,8 @@ extension MovieDetailEntity {
                     backdrops: images?.backdrops?.map { $0.toModel } ?? [],
                     posters: images?.posters?.map { $0.toModel } ?? [],
                     casts: credits?.cast?.sorted(by: { ($0.popularity ?? 0) > ($1.popularity ?? 0) }).map { $0.toModel } ?? [],
-                    crews: credits?.crew?.sorted(by: { ($0.popularity ?? 0) > ($1.popularity ?? 0) }).map { $0.toModel } ?? [])
+                    crews: credits?.crew?.sorted(by: { ($0.popularity ?? 0) > ($1.popularity ?? 0) }).map { $0.toModel } ?? [],
+                    similars: similar?.results?.map { $0.toModel } ?? [])
     }
 }
 

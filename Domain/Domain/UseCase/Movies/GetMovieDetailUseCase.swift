@@ -29,7 +29,7 @@ public struct GetMovieDetailUseCase: InputOutputUseCaseProtocol {
     private let movieDetailRepository: MovieDetailRepository
 
     public func run(input: GetMovieDetailInput) async throws -> MovieDetail {
-        let result = try await movieDetailRepository.getNowPlaying(language: input.language, movieID: input.movieID)
+        let result = try await movieDetailRepository.getDetail(language: input.language, movieID: input.movieID)
         return result.toModel
     }
 }

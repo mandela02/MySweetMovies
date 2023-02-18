@@ -12,10 +12,10 @@ public class MovieDetailRepository: BaseRepository<MovieDetailEntity> {
         super.init(endpoint: endpoint)
     }
     
-    public func getNowPlaying(language: String, movieID: Int) async throws -> MovieDetailEntity {
+    public func getDetail(language: String, movieID: Int) async throws -> MovieDetailEntity {
         var param = baseParam
         param["language"] = language
-        param["append_to_response"] = "images,credits"
+        param["append_to_response"] = "images,credits,similar"
         param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: String(format: .movieDetailPath, "\(movieID)"),
                                                         param: param,

@@ -107,4 +107,5 @@ extension String {
     static var cast: String { String(localizedKey: "cast") }
     static var crews: String { String(localizedKey: "crews") }
     static var findOutMore: String { String(localizedKey: "findOutMore") }
+    static var smimilar: String { String(localizedKey: "smimilar") }
 }

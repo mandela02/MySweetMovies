@@ -30,6 +30,7 @@ public struct MovieDetailEntity: Codable {
     public let voteCount: Int?
     public let images: MovieImagesEntity?
     public let credits: MovieCreditsEntity?
+    public let similar: MoviesEntity?
 
     public enum CodingKeys: String, CodingKey {
         case adult
@@ -50,6 +51,7 @@ public struct MovieDetailEntity: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
         case images, credits
+        case similar = "similar"
     }
 }
 

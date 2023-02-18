@@ -34,6 +34,8 @@ struct MovieDetailScreen: View {
                     crewsView
                         .padding(.bottom, 20)
                     collectionView
+                        .padding(.bottom, 20)
+                    similarView
                     SizedBox(height: 200)
                 }
             }
@@ -222,6 +224,20 @@ extension MovieDetailScreen {
             .frame(width: width - 20, height: (width - 20) * 9 / 16)
             .cornerRadius(8)
         }
+    }
+    
+    private var similarView: some View {
+        VStack(alignment: .leading) {
+            Text(String.smimilar)
+                .foregroundColor(.white)
+                .foregroundColor(.white)
+                .font(.system(size: 14, weight: .bold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 10)
+
+            MoviesView(movies: viewModel.state.detail?.similars ?? [])
+        }
+        .padding(.vertical, 20)
     }
 }
 

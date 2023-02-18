@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90463E2329A17DCF00AB6728 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90463E2229A17DCF00AB6728 /* MoviesView.swift */; };
 		90BBB8ED29A12F5D00C0CBD6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */; };
 		90BBB8F329A12FAB00C0CBD6 /* DiscoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */; };
 		90BBB8F629A12FD000C0CBD6 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */; };
@@ -112,6 +113,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90463E2229A17DCF00AB6728 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		90BBB8EC29A12F5D00C0CBD6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScreen.swift; sourceTree = "<group>"; };
 		90BBB8F529A12FD000C0CBD6 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				90BBB93129A1757300C0CBD6 /* CreditsView.swift */,
+				90463E2229A17DCF00AB6728 /* MoviesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				A46A65A9299F2FD70013FE1C /* InternetManager.swift in Sources */,
 				90BBB8FB29A1305D00C0CBD6 /* UIApplication+Extension.swift in Sources */,
 				90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */,
+				90463E2329A17DCF00AB6728 /* MoviesView.swift in Sources */,
 				A46A65B8299F30B60013FE1C /* LockView.swift in Sources */,
 				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
 				90BD7ECF299FC0FF00550533 /* ToastViewModifier.swift in Sources */,
