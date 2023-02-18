@@ -21,14 +21,14 @@ struct NetworkImage: View {
     
     var body: some View {
         if url.isEmpty {
-            cinderNameView
+            nameView
         } else {
             LazyImage(url: URL(string: url)) { phase in
                 if phase.isLoading {
                     BlinkingLogo(size: CGSize(width: placeholderSize, height: placeholderSize))
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else if phase.error != nil {
-                    cinderNameView
+                    nameView
                 } else if let image = phase.image {
                     image
                 }
@@ -39,12 +39,13 @@ struct NetworkImage: View {
         }
     }
     
-    var cinderNameView: some View {
+    var nameView: some View {
         GeometryReader { proxy in
             Image
                 .movieAndSpeaker
                 .resizable()
                 .scaledToFit()
+                .foregroundColor(.white)
                 .padding(.all, 10)
                 .frame(width: proxy.size.width, height: proxy.size.height)
         }

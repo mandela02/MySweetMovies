@@ -41,6 +41,9 @@ class GenresManager: ObservableObject {
             let result = try await getGenresUseCase.run(input: Settings.language.value)
             self.movieGenres = result.movieGenres
             self.tvGenres = result.tvGenres
+            NotificationCenter.default
+                .post(name: .genresDidChange,
+                      object: nil)
         } catch {
             debugPrint(error)
         }

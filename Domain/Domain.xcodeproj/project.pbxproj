@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90BBB8FF29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8FE29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift */; };
 		90BD7EED299FDD4D00550533 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EEC299FDD4D00550533 /* HomeData.swift */; };
 		90BD7EEF299FDD7B00550533 /* GetHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */; };
 		90BD7EF6299FE79A00550533 /* GetMoviesByGenresUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90BBB8FE29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesByGenreUseCase.swift; sourceTree = "<group>"; };
 		90BD7EEC299FDD4D00550533 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeUseCase.swift; sourceTree = "<group>"; };
 		90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMoviesByGenresUseCase.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				A46A6604299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift */,
 				90BD7EEE299FDD7B00550533 /* GetHomeUseCase.swift */,
 				90BD7EF5299FE79A00550533 /* GetMoviesByGenresUseCase.swift */,
+				90BBB8FE29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BBB8FF29A1374E00C0CBD6 /* GetMoviesByGenreUseCase.swift in Sources */,
 				A46A6605299F834A0013FE1C /* GetNowPlayingMoviesUseCase.swift in Sources */,
 				90BD7EEF299FDD7B00550533 /* GetHomeUseCase.swift in Sources */,
 				A46A65FD299F7F890013FE1C /* Movies.swift in Sources */,
@@ -388,7 +392,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +421,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

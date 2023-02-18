@@ -9,7 +9,8 @@ import Foundation
 
 public protocol UseCaseProviderProtocol {
     func getGenresUseCase() -> GetGenresUseCase
-    func getNowPlayingMovieUseCase() -> GetNowPlayingMovieUseCase
+    func getMoviesUseCase() -> GetMoviesUseCase
     func getHomeUseCase() -> GetHomeUseCase
     func getMoviesByGenresUseCase() -> GetMoviesByGenresUseCase
+    func getMoviesByGenreUseCase() -> GetMoviesByGenreUseCase
 }

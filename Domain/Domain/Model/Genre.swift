@@ -12,7 +12,11 @@ public struct Genres {
     public let tvGenres: [Genre]
 }
 
-public struct Genre: Identifiable {
+public struct Genre: Identifiable, Equatable {
+    public static func == (lhs: Genre, rhs: Genre) -> Bool {
+        lhs.id == rhs.id
+    }
+
     public let id: Int
     public let name: String
 }
