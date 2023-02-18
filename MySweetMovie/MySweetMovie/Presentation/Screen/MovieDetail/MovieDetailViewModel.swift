@@ -32,6 +32,13 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
     
     private let getMovieDetailUseCase: GetMovieDetailUseCase
     
+    func onChangeMovie(movie: Movie) {
+        state.movieID = movie.id
+        Task { @MainActor in
+            await fetchDataFromApi()
+        }
+    }
+    
     func fetchDataFromApi() async {
         do {
             state.loadingStatus = .inProcess
@@ -45,7 +52,7 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
     }
     
     struct State {
-        let movieID: Int
+        var movieID: Int
         var loadingStatus: LoadingStatus = .initial
         var detail: MovieDetail?
     }

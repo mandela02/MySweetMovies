@@ -11,6 +11,7 @@ import Domain
 
 struct MoviesView: View {
     let movies: [Movie]
+    let onTap: (Movie) -> Void
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -19,6 +20,9 @@ struct MoviesView: View {
                 LazyHStack(spacing: 10) {
                     ForEach(movies) { movie in
                         buildMovieView(movie: movie)
+                            .onTapGesture {
+                                onTap(movie)
+                            }
                     }
                 }
                 Color.clear.frame(width: 10)

@@ -56,6 +56,7 @@ struct MovieDetailScreen: View {
                 .ignoresSafeArea()
                 .blurOverlay()
         )
+        .clearWhenLoading(loadingStatus: viewModel.state.loadingStatus)
         .viewDidLoad(initState: viewModel.fetchDataFromApi)
         .disableWhenLoading(loadingStatus: viewModel.state.loadingStatus)
         .loadingCircle(loadingStatus: $viewModel.state.loadingStatus)
@@ -145,16 +146,18 @@ extension MovieDetailScreen {
             
             Spacer()
             
-            TabView {
-                ForEach(viewModel.state.detail?.posters ?? []) { image in
-                    NetworkImage(url: image.path.tmdbOriginalImage,
-                                 placeholderSize: 20)
+            if let posters = viewModel.state.detail?.posters, !posters.isEmpty {
+                TabView {
+                    ForEach(viewModel.state.detail?.posters ?? []) { image in
+                        NetworkImage(url: image.path.tmdbOriginalImage,
+                                     placeholderSize: 20)
+                    }
                 }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .indexViewStyle(.page(backgroundDisplayMode: .never))
+                .frame(width: imageWidth, height: imageWidth * 3 / 2)
+                .cornerRadius(8)
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .indexViewStyle(.page(backgroundDisplayMode: .never))
-            .frame(width: imageWidth, height: imageWidth * 3 / 2)
-            .cornerRadius(8)
         }
         .padding(.horizontal, 10)
     }
@@ -221,7 +224,7 @@ extension MovieDetailScreen {
                 .padding(.all, 10)
                 .blurBackground()
             }
-            .frame(width: width - 20, height: (width - 20) * 9 / 16)
+            .frame(width: (width - 20).alwaysPositive, height: (width - 20).alwaysPositive * 9 / 16)
             .cornerRadius(8)
         }
     }
@@ -235,7 +238,10 @@ extension MovieDetailScreen {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 10)
 
-            MoviesView(movies: viewModel.state.detail?.similars ?? [])
+            MoviesView(movies: viewModel.state.detail?.similars ?? [],
+                       onTap: {
+                viewModel.onChangeMovie(movie: $0)
+            })
         }
         .padding(.vertical, 20)
     }
