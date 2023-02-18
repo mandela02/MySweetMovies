@@ -23,14 +23,14 @@ struct HomeScreen: View {
                 .ignoresSafeArea()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-            .viewDidLoad(initState: {
-                await viewModel.fetchDataFromApi()
-            })
-            .disableWhenLoading(loadingStatus: viewModel.state.loadingStatus)
-            .loadingCircle(loadingStatus: $viewModel.state.loadingStatus)
-            .reload(loadingStatus: $viewModel.state.loadingStatus,
-                    onRefresh: viewModel.fetchDataFromApi)
-            .errorView(loadingStatus: $viewModel.state.loadingStatus)
+        .viewDidLoad(initState: {
+            await viewModel.fetchDataFromApi()
+        })
+        .disableWhenLoading(loadingStatus: viewModel.state.loadingStatus)
+        .loadingCircle(loadingStatus: $viewModel.state.loadingStatus)
+        .reload(loadingStatus: $viewModel.state.loadingStatus,
+                onRefresh: viewModel.fetchDataFromApi)
+        .errorView(loadingStatus: $viewModel.state.loadingStatus)
     }
 }
 
@@ -81,7 +81,9 @@ extension HomeScreen {
                                                                              withReuseIdentifier: HeaderCollectionReusableView.className,
                                                                              for: indexPath) as? HeaderCollectionReusableView
             let section = viewModel.state.sections[indexPath.section]
-            headerView?.onMoreButtonTapped = {}
+            headerView?.onMoreButtonTapped = {
+                self.viewModel.goToList(kind: section.kind)
+            }
             headerView?.setupView(title: section.title)
             return headerView ?? UICollectionReusableView()
         },

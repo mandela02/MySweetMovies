@@ -48,10 +48,13 @@ extension MainTabBarViewController {
     private func buildMovie() -> UINavigationController {
         let navigationController = UINavigationController()
         
+        let navigator = HomeNavigator(navigationController: navigationController)
+        
         let getHomeUseCase = Application.shared.userCaseProvider.getHomeUseCase()
         let getMoviesByGenresUseCase = Application.shared.userCaseProvider.getMoviesByGenresUseCase()
                 
-        let viewModel = HomeViewModel(getHomeUseCase: getHomeUseCase,
+        let viewModel = HomeViewModel(navigator: navigator,
+                                      getHomeUseCase: getHomeUseCase,
                                       getMoviesByGenresUseCase: getMoviesByGenresUseCase)
         let view = HomeScreen(viewModel: viewModel)
         

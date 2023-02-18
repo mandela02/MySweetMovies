@@ -19,8 +19,8 @@ public struct UseCaseProvider: UseCaseProviderProtocol {
         return GetGenresUseCase(genresRepository: provider.genresRepository)
     }
     
-    public func getNowPlayingMovieUseCase() -> GetNowPlayingMovieUseCase {
-        GetNowPlayingMovieUseCase(moviesRepository: provider.moviesRepository)
+    public func getMoviesUseCase() -> GetMoviesUseCase {
+        GetMoviesUseCase(moviesRepository: provider.moviesRepository)
     }
     
     public func getHomeUseCase() -> GetHomeUseCase {
@@ -29,5 +29,9 @@ public struct UseCaseProvider: UseCaseProviderProtocol {
     
     public func getMoviesByGenresUseCase() -> GetMoviesByGenresUseCase {
         GetMoviesByGenresUseCase(moviesRepository: provider.moviesRepository)
+    }
+    
+    public func getMoviesByGenreUseCase() -> GetMoviesByGenreUseCase {
+        GetMoviesByGenreUseCase(moviesRepository: provider.moviesRepository)
     }
 }

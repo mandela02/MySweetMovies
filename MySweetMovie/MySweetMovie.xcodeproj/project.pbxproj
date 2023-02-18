@@ -13,6 +13,11 @@
 		90BBB8F829A12FE300C0CBD6 /* TvScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8F729A12FE300C0CBD6 /* TvScreen.swift */; };
 		90BBB8FB29A1305D00C0CBD6 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8FA29A1305D00C0CBD6 /* UIApplication+Extension.swift */; };
 		90BBB8FD29A133A800C0CBD6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB8FC29A133A800C0CBD6 /* UIImage+Extension.swift */; };
+		90BBB90229A138FC00C0CBD6 /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB90129A138FC00C0CBD6 /* MovieListScreen.swift */; };
+		90BBB90529A1390B00C0CBD6 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB90429A1390B00C0CBD6 /* MovieListViewModel.swift */; };
+		90BBB90729A1434E00C0CBD6 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB90629A1434E00C0CBD6 /* HomeNavigator.swift */; };
+		90BBB90929A1464200C0CBD6 /* MovieListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB90829A1464200C0CBD6 /* MovieListNavigator.swift */; };
+		90BBB90B29A1485D00C0CBD6 /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB90A29A1485D00C0CBD6 /* NotificationName+Extension.swift */; };
 		90BD7EC7299FBF5C00550533 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */; };
 		90BD7ECA299FBF9400550533 /* CirlceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */; };
 		90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */; };
@@ -107,6 +112,11 @@
 		90BBB8F729A12FE300C0CBD6 /* TvScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvScreen.swift; sourceTree = "<group>"; };
 		90BBB8FA29A1305D00C0CBD6 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		90BBB8FC29A133A800C0CBD6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		90BBB90129A138FC00C0CBD6 /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
+		90BBB90429A1390B00C0CBD6 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		90BBB90629A1434E00C0CBD6 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
+		90BBB90829A1464200C0CBD6 /* MovieListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListNavigator.swift; sourceTree = "<group>"; };
+		90BBB90A29A1485D00C0CBD6 /* NotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
 		90BD7EC6299FBF5C00550533 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		90BD7EC9299FBF9400550533 /* CirlceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirlceLoadingView.swift; sourceTree = "<group>"; };
 		90BD7ECC299FBFBC00550533 /* BlinkingLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingLogo.swift; sourceTree = "<group>"; };
@@ -223,6 +233,16 @@
 				90BBB8F229A12FAB00C0CBD6 /* DiscoverScreen.swift */,
 			);
 			path = Discover;
+			sourceTree = "<group>";
+		};
+		90BBB90029A138ED00C0CBD6 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				90BBB90129A138FC00C0CBD6 /* MovieListScreen.swift */,
+				90BBB90429A1390B00C0CBD6 /* MovieListViewModel.swift */,
+				90BBB90829A1464200C0CBD6 /* MovieListNavigator.swift */,
+			);
+			path = MovieList;
 			sourceTree = "<group>";
 		};
 		90BD7EC5299FBF5300550533 /* RoundedCorner */ = {
@@ -347,6 +367,7 @@
 		A46A658B299F2EAA0013FE1C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				90BBB90029A138ED00C0CBD6 /* MovieList */,
 				90BBB8F029A12F7E00C0CBD6 /* Discover */,
 				90BBB8EF29A12F7A00C0CBD6 /* Search */,
 				90BBB8EE29A12F6700C0CBD6 /* Tv */,
@@ -445,6 +466,7 @@
 				90BD7EF9299FEBEC00550533 /* UIColor+Extension.swift */,
 				90BBB8FA29A1305D00C0CBD6 /* UIApplication+Extension.swift */,
 				90BBB8FC29A133A800C0CBD6 /* UIImage+Extension.swift */,
+				90BBB90A29A1485D00C0CBD6 /* NotificationName+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -539,6 +561,7 @@
 			children = (
 				A46A6607299F85240013FE1C /* HomeScreen.swift */,
 				A46A6609299F867B0013FE1C /* HomeViewModel.swift */,
+				90BBB90629A1434E00C0CBD6 /* HomeNavigator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -694,6 +717,7 @@
 				A46A660A299F867B0013FE1C /* HomeViewModel.swift in Sources */,
 				90BD7ED1299FC2CA00550533 /* ErrorViewModifier.swift in Sources */,
 				90BD7ECD299FBFBC00550533 /* BlinkingLogo.swift in Sources */,
+				90BBB90229A138FC00C0CBD6 /* MovieListScreen.swift in Sources */,
 				A46A65A1299F2FCC0013FE1C /* UIViewController+Extension.swift in Sources */,
 				A46A6608299F85240013FE1C /* HomeScreen.swift in Sources */,
 				A46A65A3299F2FCC0013FE1C /* Color+Extension.swift in Sources */,
@@ -703,6 +727,8 @@
 				90BBB8ED29A12F5D00C0CBD6 /* TabBarViewController.swift in Sources */,
 				90BD7EDF299FD4BA00550533 /* BigMovieCollectionViewCell.swift in Sources */,
 				90BD7EEB299FDB1500550533 /* SmallMovieCollectionViewCell.swift in Sources */,
+				90BBB90B29A1485D00C0CBD6 /* NotificationName+Extension.swift in Sources */,
+				90BBB90529A1390B00C0CBD6 /* MovieListViewModel.swift in Sources */,
 				90BD7ED4299FC2FD00550533 /* ErrorAlertView.swift in Sources */,
 				90BBB8F829A12FE300C0CBD6 /* TvScreen.swift in Sources */,
 				90BBB8F329A12FAB00C0CBD6 /* DiscoverScreen.swift in Sources */,
@@ -713,6 +739,7 @@
 				A46A65AB299F2FEE0013FE1C /* Settings.swift in Sources */,
 				90BD7ECF299FC0FF00550533 /* ToastViewModifier.swift in Sources */,
 				A46A65A8299F2FD70013FE1C /* BiometricAuthenticationManager.swift in Sources */,
+				90BBB90929A1464200C0CBD6 /* MovieListNavigator.swift in Sources */,
 				90BD7EF4299FE00000550533 /* UnderlineButton.swift in Sources */,
 				90BD7EF1299FDFCD00550533 /* HeaderView.swift in Sources */,
 				A46A6592299F2F470013FE1C /* BaseViewController.swift in Sources */,
@@ -724,6 +751,7 @@
 				A46A659B299F2FB30013FE1C /* ViewDidLoadModifier.swift in Sources */,
 				A46A654B299F2D510013FE1C /* AppDelegate.swift in Sources */,
 				A46A65A4299F2FCC0013FE1C /* View+Extension.swift in Sources */,
+				90BBB90729A1434E00C0CBD6 /* HomeNavigator.swift in Sources */,
 				90BD7ED9299FCE4B00550533 /* SectionModel.swift in Sources */,
 				A46A654D299F2D510013FE1C /* SceneDelegate.swift in Sources */,
 				A46A659A299F2FB30013FE1C /* AuthenticationModifier.swift in Sources */,

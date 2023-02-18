@@ -12,13 +12,15 @@ import IosUtilities
 import UnderlyingViewForSwiftUI
 
 @MainActor
-class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
+class HomeViewModel: BaseViewModel<HomeViewModel.State> {
     
-    init(getHomeUseCase: GetHomeUseCase,
+    init(navigator: HomeNavigator,
+         getHomeUseCase: GetHomeUseCase,
          getMoviesByGenresUseCase: GetMoviesByGenresUseCase) {
+        self.navigator = navigator
         self.getHomeUseCase = getHomeUseCase
         self.getMoviesByGenresUseCase = getMoviesByGenresUseCase
-        super.init(state: HomeState())
+        super.init(state: State())
         
         NotificationCenter.default.publisher(for: .languageDidChange)
             .map { _ in }
@@ -32,6 +34,8 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
             .store(in: &cancellables)
     }
     
+    let navigator: HomeNavigator
+    
     let getHomeUseCase: GetHomeUseCase
     let getMoviesByGenresUseCase: GetMoviesByGenresUseCase
     
@@ -40,10 +44,10 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
             self.state.loadingStatus = .inProcess
             let movies = try await getHomeUseCase.run(input: Settings.language.value)
             
-            let upcoming = Section(title: "", data: movies.upcoming.map { SingleCell(model: $0) }, type: .big)
-            let nowPlaying = Section(title: .nowPlaying, data: movies.nowPlaying.map { SingleCell(model: $0) }, type: .small)
-            let popular = Section(title: .trending, data: movies.popular.map { SingleCell(model: $0) }, type: .small)
-            let topRated = Section(title: .topRated, data: movies.topRated.map { SingleCell(model: $0) }, type: .small)
+            let upcoming = Section(title: "", data: movies.upcoming.map { SingleCell(model: $0) }, type: .big, kind: .upcoming)
+            let nowPlaying = Section(title: .nowPlaying, data: movies.nowPlaying.map { SingleCell(model: $0) }, type: .small, kind: .nowPlaying)
+            let popular = Section(title: .trending, data: movies.popular.map { SingleCell(model: $0) }, type: .small, kind: .popular)
+            let topRated = Section(title: .topRated, data: movies.topRated.map { SingleCell(model: $0) }, type: .small, kind: .topRated)
             
             state.sections = [upcoming, nowPlaying, popular, topRated]
             
@@ -54,7 +58,7 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
             
             let genreSections = movieByGenres.map { Section(title: $0.genre.name,
                                                             data: $0.movies.map { SingleCell(model: $0) },
-                                                            type: .small) }
+                                                            type: .small, kind: .genre($0.genre)) }
             
             state.sections.append(contentsOf: genreSections)
             
@@ -68,6 +72,10 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
         await self.fetchDataFromApi()
     }
     
+    func goToList(kind: MovieListKind) {
+        self.navigator.goToList(kind: kind)
+    }
+    
     enum SectionType {
         case big
         case small
@@ -78,10 +86,11 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
         var data: [any Cell]
         
         var type: SectionType
+        var kind: MovieListKind
     }
     
     
-    struct HomeState {
+    struct State {
         var loadingStatus: LoadingStatus = .initial
         var sections: [Section] = []
     }

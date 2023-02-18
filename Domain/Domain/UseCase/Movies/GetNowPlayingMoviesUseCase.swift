@@ -8,18 +8,29 @@
 import Foundation
 import Platform
 
-public struct GetNowPlayingMovieUseCase: InputOutputUseCaseProtocol {
+public struct GetMoviesUseCase: InputOutputUseCaseProtocol {
     public typealias Output = Movies
     public typealias Input = GetNowPlayingMovieInput
     
     public struct GetNowPlayingMovieInput {
-        public init(language: String, page: Int) {
+        public init(language: String,
+                    type: MovieType,
+                    page: Int) {
             self.language = language
             self.page = page
+            self.type = type
         }
         
         let language: String
         let page: Int
+        let type: MovieType
+    }
+    
+    public enum MovieType {
+        case upcoming
+        case nowPlaying
+        case popular
+        case topRated
     }
     
     public init(moviesRepository: MoviesRepository) {
@@ -29,8 +40,19 @@ public struct GetNowPlayingMovieUseCase: InputOutputUseCaseProtocol {
     private let moviesRepository: MoviesRepository
 
     public func run(input: GetNowPlayingMovieInput) async throws -> Movies {
-        let result = try await moviesRepository.getNowPlaying(language: input.language, page: input.page)
+        var result: MoviesEntity
         
+        switch input.type {
+        case .nowPlaying:
+            result = try await moviesRepository.getNowPlaying(language: input.language, page: input.page)
+        case .topRated:
+            result = try await moviesRepository.getTopRated(language: input.language, page: input.page)
+        case .popular:
+            result = try await moviesRepository.getPopular(language: input.language, page: input.page)
+        case.upcoming:
+            result = try await moviesRepository.getUpcomming(language: input.language, page: input.page)
+        }
+                
         return Movies(page: result.page ?? -1,
                       totalPage: result.totalPages ?? -1,
                       totalResult: result.totalResults ?? -1,

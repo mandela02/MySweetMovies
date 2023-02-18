@@ -90,4 +90,5 @@ extension String {
     static var search: String { String(localizedKey: "search") }
     static var discover: String { String(localizedKey: "discover") }
     static var setting: String { String(localizedKey: "setting") }
+    static var upcoming: String { String(localizedKey: "upcoming") }
 }
