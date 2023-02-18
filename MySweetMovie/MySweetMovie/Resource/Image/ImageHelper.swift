@@ -24,4 +24,9 @@ extension Image {
     static let error = "error".image
     static let warning = "warning".image
     static let success = "success".image
+    
+    static let halfStar = "star.leadinghalf.filled".systemImage
+    static let fullStar = "star.fill".systemImage
+    static let emptyStar = "star".systemImage
+    static let clockCircle = "clock.circle".systemImage
 }
