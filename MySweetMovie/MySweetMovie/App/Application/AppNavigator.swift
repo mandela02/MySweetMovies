@@ -36,12 +36,7 @@ class AppNavigator: AppNavigatorProtocol {
     
     @MainActor
     func setHomeViewController() {
-        let getHomeUseCase = Application.shared.userCaseProvider.getHomeUseCase()
-        let getMoviesByGenresUseCase = Application.shared.userCaseProvider.getMoviesByGenresUseCase()
-        let viewModel = HomeViewModel(getHomeUseCase: getHomeUseCase,
-                                      getMoviesByGenresUseCase: getMoviesByGenresUseCase)
-        let view = HomeScreen(viewModel: viewModel)
-        let viewController = BaseViewController(rootView: view)
+        let viewController = MainTabBarViewController()
         
         navigationController.setViewControllers([viewController], animated: false)
         

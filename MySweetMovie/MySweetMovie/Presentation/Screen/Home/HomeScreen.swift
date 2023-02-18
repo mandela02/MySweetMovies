@@ -20,6 +20,7 @@ struct HomeScreen: View {
             header
                 .padding(.horizontal, 20)
             gridView
+                .ignoresSafeArea()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
             .viewDidLoad(initState: {

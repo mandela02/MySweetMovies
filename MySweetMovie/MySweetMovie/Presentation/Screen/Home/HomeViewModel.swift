@@ -19,6 +19,17 @@ class HomeViewModel: BaseViewModel<HomeViewModel.HomeState> {
         self.getHomeUseCase = getHomeUseCase
         self.getMoviesByGenresUseCase = getMoviesByGenresUseCase
         super.init(state: HomeState())
+        
+        NotificationCenter.default.publisher(for: .languageDidChange)
+            .map { _ in }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] value in
+                guard let self = self else { return }
+                Task { @MainActor in
+                    await self.pullToRefresh()
+                }
+            })
+            .store(in: &cancellables)
     }
     
     let getHomeUseCase: GetHomeUseCase
