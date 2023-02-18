@@ -106,4 +106,5 @@ extension String {
     static var min: String { String(localizedKey: "min") }
     static var cast: String { String(localizedKey: "cast") }
     static var crews: String { String(localizedKey: "crews") }
+    static var findOutMore: String { String(localizedKey: "findOutMore") }
 }

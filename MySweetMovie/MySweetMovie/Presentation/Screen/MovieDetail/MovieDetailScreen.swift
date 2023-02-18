@@ -31,9 +31,10 @@ struct MovieDetailScreen: View {
                     overviewView
                         .padding(.bottom, 20)
                     castsView
-                        .padding(.bottom, 20)
                     crewsView
-                    SizedBox(height: 400)
+                        .padding(.bottom, 20)
+                    collectionView
+                    SizedBox(height: 200)
                 }
             }
             .coordinateSpace(name: namedSpace)
@@ -185,9 +186,6 @@ extension MovieDetailScreen {
             CreditsView(credits: viewModel.state.detail?.casts ?? [], isActor: true)
         }
         .padding(.vertical, 20)
-        .background(
-            Color.shadowMountain.opacity(0.3)
-        )
     }
     
     private var crewsView: some View {
@@ -202,11 +200,33 @@ extension MovieDetailScreen {
             CreditsView(credits: viewModel.state.detail?.crews ?? [], isActor: false)
         }
         .padding(.vertical, 20)
-        .background(
-            Color.shadowMountain.opacity(0.3)
-        )
     }
+    
+    @ViewBuilder
+    private var collectionView: some View {
+        if let collection = viewModel.state.detail?.belongsToCollection {
+            ZStack(alignment: .bottomLeading) {
+                NetworkImage(url: collection.backdropPath.tmdbOriginalImage)
+                VStack(alignment: .leading) {
+                    Text(String.findOutMore)
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(.white)
+                    Text(collection.name)
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(.white)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.all, 10)
+                .blurBackground()
+            }
+            .frame(width: width - 20, height: (width - 20) * 9 / 16)
+            .cornerRadius(8)
+        }
+    }
+}
 
+// MARK: - Components
+extension MovieDetailScreen {
     @ViewBuilder
     private var headerImagesView: some View {
         GeometryReader { proxy in
