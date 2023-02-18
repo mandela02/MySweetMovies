@@ -18,4 +18,6 @@ extension String {
     static let popularPath = "/3/movie/popular"
     static let topRatedPath = "/3/movie/top_rated"
     static let discoverMovie = "/3/discover/movie"
+    
+    static let movieDetailPath = "/3/movie/%@"
 }
