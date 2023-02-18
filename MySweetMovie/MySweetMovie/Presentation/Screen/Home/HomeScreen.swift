@@ -87,6 +87,10 @@ extension HomeScreen {
             headerView?.setupView(title: section.title)
             return headerView ?? UICollectionReusableView()
         },
+                                 didSelectItem: { _, _ in
+            viewModel.goToMovie()
+            
+        },
                                  extraSetting: { collectionView in
             collectionView.collectionViewLayout = buildCompositeLayout()
             collectionView.backgroundColor = .clear

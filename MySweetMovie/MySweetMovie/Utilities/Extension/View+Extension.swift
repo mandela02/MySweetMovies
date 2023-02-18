@@ -198,6 +198,18 @@ extension View {
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 
     }
+    
+    @ViewBuilder
+    func bulrOverlay() -> some View {
+        self
+            .overlay(
+                Color.black
+                    .opacity(0.3)
+                    .background(
+                        .regularMaterial.opacity(0.3).blendMode(.color)
+                    )
+            )
+    }
 }
 
 private struct SizePreferenceKey: PreferenceKey {
