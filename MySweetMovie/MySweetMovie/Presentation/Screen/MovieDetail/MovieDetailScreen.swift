@@ -205,32 +205,38 @@ extension MovieDetailScreen {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
+    @ViewBuilder
     private var castsView: some View {
-        VStack(alignment: .leading) {
-            Text(String.cast)
-                .foregroundColor(.white)
-                .foregroundColor(.white)
-                .font(.system(size: 14, weight: .bold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 10)
+        if let casts = viewModel.state.detail?.casts, !casts.isEmpty {
+            VStack(alignment: .leading) {
+                Text(String.cast)
+                    .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 10)
 
-            CreditsView(credits: viewModel.state.detail?.casts ?? [], isActor: true)
+                CreditsView(credits: viewModel.state.detail?.casts ?? [], isActor: true)
+            }
+            .padding(.vertical, 20)
         }
-        .padding(.vertical, 20)
     }
     
+    @ViewBuilder
     private var crewsView: some View {
-        VStack(alignment: .leading) {
-            Text(String.crews)
-                .foregroundColor(.white)
-                .foregroundColor(.white)
-                .font(.system(size: 14, weight: .bold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 10)
+        if let crews = viewModel.state.detail?.crews, !crews.isEmpty {
+            VStack(alignment: .leading) {
+                Text(String.crews)
+                    .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 10)
 
-            CreditsView(credits: viewModel.state.detail?.crews ?? [], isActor: false)
+                CreditsView(credits: viewModel.state.detail?.crews ?? [], isActor: false)
+            }
+            .padding(.vertical, 20)
         }
-        .padding(.vertical, 20)
     }
     
     @ViewBuilder
@@ -258,22 +264,25 @@ extension MovieDetailScreen {
         }
     }
     
+    @ViewBuilder
     private var similarView: some View {
-        VStack(alignment: .leading) {
-            Text(String.smimilar)
-                .foregroundColor(.white)
-                .foregroundColor(.white)
-                .font(.system(size: 14, weight: .bold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 10)
+        if let similars = viewModel.state.detail?.similars, !similars.isEmpty {
+            VStack(alignment: .leading) {
+                Text(String.smimilar)
+                    .foregroundColor(.white)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 10)
 
-            MoviesView(movies: viewModel.state.detail?.similars ?? [],
-                       onTap: {
-                self.shouldShowNavigationBar = false
-                viewModel.onChangeMovie(movie: $0)
-            })
+                MoviesView(movies: viewModel.state.detail?.similars ?? [],
+                           onTap: {
+                    self.shouldShowNavigationBar = false
+                    viewModel.onChangeMovie(movie: $0)
+                })
+            }
+            .padding(.vertical, 20)
         }
-        .padding(.vertical, 20)
     }
 }
 

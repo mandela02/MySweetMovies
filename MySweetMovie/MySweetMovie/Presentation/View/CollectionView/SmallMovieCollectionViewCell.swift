@@ -21,7 +21,8 @@ struct SmallMovieView: View {
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             GeometryReader { proxy in
-                NetworkImage(url: movie.posterPath.tmdbImage)
+                NetworkImage(url: movie.posterPath.tmdbImage,
+                             placeholderText: movie.title)
                     .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
                     .cornerRadius(14)
             }

@@ -29,7 +29,8 @@ struct CreditsView: View {
     
     private func buildCreditView(credit: Credit) -> some View {
         ZStack(alignment: .bottomLeading) {
-            NetworkImage(url: credit.image.tmdbImage)
+            NetworkImage(url: credit.image.tmdbImage,
+                         placeholderText: credit.name)
             
             VStack(alignment: .leading) {
                 Text(credit.name)

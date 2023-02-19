@@ -13,7 +13,9 @@ import IosUtilities
 @MainActor
 class DiscoverViewModel: BaseViewModel<DiscoverViewModel.State> {
     
-    init(getMoviesByGenreUseCase: GetMoviesByGenreUseCase) {
+    init(navigator: DiscoverNavigatorProtocol,
+         getMoviesByGenreUseCase: GetMoviesByGenreUseCase) {
+        self.navigator = navigator
         self.getMoviesByGenreUseCase = getMoviesByGenreUseCase
         
         super.init(state: State())
@@ -38,6 +40,7 @@ class DiscoverViewModel: BaseViewModel<DiscoverViewModel.State> {
             .store(in: &cancellables)
     }
     
+    private let navigator: DiscoverNavigatorProtocol
     private let getMoviesByGenreUseCase: GetMoviesByGenreUseCase
     
     func fetchDataFromApi(genre: Genre?) async {
@@ -87,6 +90,10 @@ class DiscoverViewModel: BaseViewModel<DiscoverViewModel.State> {
         }
     }
     
+    func goToMovie(movieID: Int) {
+        self.navigator.goToMovie(movieID: movieID)
+    }
+
     struct State {
         var genre: Genre?
         var loadingStatus: LoadingStatus = .initial

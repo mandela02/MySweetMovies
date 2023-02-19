@@ -11,13 +11,16 @@ import NukeUI
 
 struct NetworkImage: View {
     internal init(url: String,
-                  placeholderSize: CGFloat = 100) {
+                  placeholderSize: CGFloat = 100,
+                  placeholderText: String = .imagePlaceholderText) {
         self.url = url
         self.placeholderSize = placeholderSize
+        self.placeholderText = placeholderText
     }
     
     let url: String
     let placeholderSize: CGFloat
+    let placeholderText: String
     
     var body: some View {
         if url.isEmpty {
@@ -40,14 +43,11 @@ struct NetworkImage: View {
     }
     
     var nameView: some View {
-        GeometryReader { proxy in
-            Image
-                .movieAndSpeaker
-                .resizable()
-                .scaledToFit()
-                .foregroundColor(.white)
-                .padding(.all, 10)
-                .frame(width: proxy.size.width, height: proxy.size.height)
-        }
+        Text(placeholderText)
+            .foregroundColor(.white)
+            .font(.system(size: 12, weight: .regular))
+            .padding(.all, 10)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .shadowMountainBackground()
     }
 }

@@ -84,13 +84,13 @@ extension DiscoverScreen {
             await viewModel.fetchDataFromApi(genre: viewModel.state.genre)
         },
                             onSelect: { movie in
-            // viewModel.goToMovie(movieID: movie.id )
+            viewModel.goToMovie(movieID: movie.id )
         })
     }
 
     private var genresListView: some View {
         ScrollView {
-            VStack(spacing: 10) {
+            VStack(spacing: 20) {
                 ForEach(genresManager.movieGenres) { genre in
                     Text(genre.name)
                         .foregroundColor(.white)

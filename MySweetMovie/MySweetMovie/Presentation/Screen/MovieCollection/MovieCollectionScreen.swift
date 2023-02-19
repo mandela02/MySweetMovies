@@ -75,7 +75,8 @@ extension MovieCollectionScreen {
                 Spacer()
                 
                 NetworkImage(url: viewModel.state.collection.posterPath.tmdbOriginalImage,
-                             placeholderSize: 20)
+                             placeholderSize: 20,
+                             placeholderText: viewModel.state.collection.name)
                 .frame(width: imageWidth, height: imageWidth * 3 / 2)
                 .cornerRadius(8)
             }
