@@ -198,6 +198,31 @@ extension View {
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 
     }
+    
+    @ViewBuilder
+    func blurOverlay() -> some View {
+        ZStack {
+            self
+            Color.black
+                .ignoresSafeArea()
+                .opacity(0.8)
+                .background(
+                    .ultraThinMaterial
+                )
+        }
+    }
+    
+    @ViewBuilder
+    func blurBackground() -> some View {
+        self.background(
+            Color.black
+                .ignoresSafeArea()
+                .opacity(0.8)
+                .background(
+                    .ultraThinMaterial
+                )
+        )
+    }
 }
 
 private struct SizePreferenceKey: PreferenceKey {

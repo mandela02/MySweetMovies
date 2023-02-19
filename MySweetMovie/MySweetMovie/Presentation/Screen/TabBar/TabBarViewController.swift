@@ -97,7 +97,14 @@ extension MainTabBarViewController {
     
     private func buildSearch() -> UINavigationController {
         let navigationController = UINavigationController()
-        let view = SearchScreen()
+        
+        let navigator = SearchNavigator(navigationController: navigationController)
+        
+        let searchMovieUseCase = Application.shared.userCaseProvider.searchMovieUseCase()
+        
+        let viewModel = SearchViewModel(navigator: navigator,
+                                        searchMovieUseCase: searchMovieUseCase)
+        let view = SearchScreen(viewModel: viewModel)
         
         let viewController = BaseViewController(rootView: view)
         

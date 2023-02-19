@@ -67,7 +67,18 @@ extension String {
     }
     
     var tmdbImage: String {
+        if self.isEmpty {
+            return self
+        }
         return "https://image.tmdb.org/t/p/w500\(self)"
+    }
+    
+    var tmdbOriginalImage: String {
+        if self.isEmpty {
+            return self
+        }
+
+        return "https://image.tmdb.org/t/p/original\(self)"
     }
 }
 
@@ -91,4 +102,12 @@ extension String {
     static var discover: String { String(localizedKey: "discover") }
     static var setting: String { String(localizedKey: "setting") }
     static var upcoming: String { String(localizedKey: "upcoming") }
+    static var vote: String { String(localizedKey: "vote") }
+    static var min: String { String(localizedKey: "min") }
+    static var cast: String { String(localizedKey: "cast") }
+    static var crews: String { String(localizedKey: "crews") }
+    static var findOutMore: String { String(localizedKey: "findOutMore") }
+    static var smimilar: String { String(localizedKey: "smimilar") }
+    static var orderNow: String { String(localizedKey: "orderNow") }
+    static var searchMovie: String { String(localizedKey: "searchMovie") }
 }

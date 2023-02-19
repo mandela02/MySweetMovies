@@ -34,4 +34,16 @@ public struct UseCaseProvider: UseCaseProviderProtocol {
     public func getMoviesByGenreUseCase() -> GetMoviesByGenreUseCase {
         GetMoviesByGenreUseCase(moviesRepository: provider.moviesRepository)
     }
+    
+    public func getMovieDetailUseCase() -> GetMovieDetailUseCase {
+        GetMovieDetailUseCase(movieDetailRepository: provider.movieDetailRepository)
+    }
+    
+    public func getMovieCollectinoUseCase() -> GetMovieCollectinoUseCase {
+        GetMovieCollectinoUseCase(movieCollectionRepository: provider.movieCollectionRepository)
+    }
+    
+    public func searchMovieUseCase() -> SearchMovieUseCase {
+        SearchMovieUseCase(moviesRepository: provider.moviesRepository)
+    }
 }

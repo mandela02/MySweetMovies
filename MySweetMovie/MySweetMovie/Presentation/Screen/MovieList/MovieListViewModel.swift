@@ -133,16 +133,15 @@ class MovieListViewModel: BaseViewModel<MovieListViewModel.State> {
         self.navigator.pop()
     }
     
+    func goToMovie(movieID: Int) {
+        self.navigator.goToMovie(movieID: movieID)
+    }
+    
     struct State {
         var kind: MovieListKind
         var loadingStatus: LoadingStatus = .initial
         var nextPage: Int? = 1
         
         var movies = [MovieSection(data: [])]
-    }
-    
-    struct MovieSection: GenericSection {
-        let title: String = ""
-        var data: [any Cell]
     }
 }

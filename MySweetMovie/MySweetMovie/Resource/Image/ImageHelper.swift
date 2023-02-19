@@ -20,8 +20,14 @@ extension Image {
     static let playFill = "play.rectangle.on.rectangle.fill".systemImage
     static let gear = "gear".systemImage
     static let chevronLeft = "chevron.left".systemImage
+    static let x = "xmark".systemImage
 
     static let error = "error".image
     static let warning = "warning".image
     static let success = "success".image
+    
+    static let halfStar = "star.leadinghalf.filled".systemImage
+    static let fullStar = "star.fill".systemImage
+    static let emptyStar = "star".systemImage
+    static let clockCircle = "clock.circle".systemImage
 }

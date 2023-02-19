@@ -10,9 +10,8 @@ import Platform
 
 public struct GetMoviesByGenresUseCase: InputOutputUseCaseProtocol {
     public typealias Output = [MovieGenre]
-    public typealias Input = GetMoviesByGenresInput
     
-    public struct GetMoviesByGenresInput {
+    public struct Input {
         public init(genres: [Genre], language: String) {
             self.language = language
             self.genres = genres
@@ -28,7 +27,7 @@ public struct GetMoviesByGenresUseCase: InputOutputUseCaseProtocol {
 
     private let moviesRepository: MoviesRepository
 
-    public func run(input: GetMoviesByGenresInput) async throws -> [MovieGenre] {
+    public func run(input: Input) async throws -> [MovieGenre] {
         try await withThrowingTaskGroup(of: MovieGenre.self,
                                         returning: [MovieGenre].self,
                                         body: { group in

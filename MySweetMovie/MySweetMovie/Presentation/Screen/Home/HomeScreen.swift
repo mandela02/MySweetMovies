@@ -87,6 +87,15 @@ extension HomeScreen {
             headerView?.setupView(title: section.title)
             return headerView ?? UICollectionReusableView()
         },
+                                 didSelectItem: { collectionView, indexPath in
+            let section = viewModel.state.sections[safe: indexPath.section]
+            let data = section?.data[safe: indexPath.item] as? SingleCell<Movie>
+
+            if let id = data?.model.id {
+                viewModel.goToMovie(movieID: id)
+            }
+            
+        },
                                  extraSetting: { collectionView in
             collectionView.collectionViewLayout = buildCompositeLayout()
             collectionView.backgroundColor = .clear

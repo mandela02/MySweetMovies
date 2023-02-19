@@ -10,9 +10,8 @@ import Platform
 
 public struct GetMoviesUseCase: InputOutputUseCaseProtocol {
     public typealias Output = Movies
-    public typealias Input = GetNowPlayingMovieInput
     
-    public struct GetNowPlayingMovieInput {
+    public struct Input {
         public init(language: String,
                     type: MovieType,
                     page: Int) {
@@ -39,7 +38,7 @@ public struct GetMoviesUseCase: InputOutputUseCaseProtocol {
 
     private let moviesRepository: MoviesRepository
 
-    public func run(input: GetNowPlayingMovieInput) async throws -> Movies {
+    public func run(input: Input) async throws -> Movies {
         var result: MoviesEntity
         
         switch input.type {

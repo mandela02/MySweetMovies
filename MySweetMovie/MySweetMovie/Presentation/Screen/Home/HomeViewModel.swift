@@ -14,7 +14,7 @@ import UnderlyingViewForSwiftUI
 @MainActor
 class HomeViewModel: BaseViewModel<HomeViewModel.State> {
     
-    init(navigator: HomeNavigator,
+    init(navigator: HomeNavigatorProtocol,
          getHomeUseCase: GetHomeUseCase,
          getMoviesByGenresUseCase: GetMoviesByGenresUseCase) {
         self.navigator = navigator
@@ -34,10 +34,10 @@ class HomeViewModel: BaseViewModel<HomeViewModel.State> {
             .store(in: &cancellables)
     }
     
-    let navigator: HomeNavigator
+    private let navigator: HomeNavigatorProtocol
     
-    let getHomeUseCase: GetHomeUseCase
-    let getMoviesByGenresUseCase: GetMoviesByGenresUseCase
+    private let getHomeUseCase: GetHomeUseCase
+    private let getMoviesByGenresUseCase: GetMoviesByGenresUseCase
     
     func fetchDataFromApi() async {
         do {
@@ -74,6 +74,10 @@ class HomeViewModel: BaseViewModel<HomeViewModel.State> {
     
     func goToList(kind: MovieListKind) {
         self.navigator.goToList(kind: kind)
+    }
+    
+    func goToMovie(movieID: Int) {
+        self.navigator.goToMovie(movieID: movieID)
     }
     
     enum SectionType {

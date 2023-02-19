@@ -1,25 +1,24 @@
 //
-//  MovieListNavigator.swift
+//  SearchNavigator.swift
 //  MySweetMovie
 //
-//  Created by TriBQ on 19/02/2023.
+//  Created by TriBQ on 20/02/2023.
 //
 
 import Foundation
 import UIKit
 
-protocol MovieListNavigatorProtocol: BaseNavigator {
+protocol SearchNavigatorProtocol: BaseNavigator {
     func goToMovie(movieID: Int)
 }
 
-struct MovieListNavigator: MovieListNavigatorProtocol {
+struct SearchNavigator: SearchNavigatorProtocol {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     var navigationController: UINavigationController
-    
-    
+        
     @MainActor
     func goToMovie(movieID: Int) {
         let navigator = MovieDetailNavigator(navigationController: self.navigationController)
