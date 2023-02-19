@@ -144,9 +144,4 @@ class MovieListViewModel: BaseViewModel<MovieListViewModel.State> {
         
         var movies = [MovieSection(data: [])]
     }
-    
-    struct MovieSection: GenericSection {
-        let title: String = ""
-        var data: [any Cell]
-    }
 }

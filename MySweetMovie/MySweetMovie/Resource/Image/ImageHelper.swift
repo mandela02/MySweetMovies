@@ -20,6 +20,7 @@ extension Image {
     static let playFill = "play.rectangle.on.rectangle.fill".systemImage
     static let gear = "gear".systemImage
     static let chevronLeft = "chevron.left".systemImage
+    static let x = "xmark".systemImage
 
     static let error = "error".image
     static let warning = "warning".image

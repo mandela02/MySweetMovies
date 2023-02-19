@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90463E2D29A20D6900AB6728 /* MovieCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90463E2C29A20D6900AB6728 /* MovieCollectionRepository.swift */; };
 		90BBB91329A1518500C0CBD6 /* CreditEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB91229A1518500C0CBD6 /* CreditEntity.swift */; };
 		90BBB91629A151BF00C0CBD6 /* MovieCollectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB91529A151BF00C0CBD6 /* MovieCollectionEntity.swift */; };
 		90BBB91929A151F100C0CBD6 /* MovieImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBB91829A151F100C0CBD6 /* MovieImageEntity.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90463E2C29A20D6900AB6728 /* MovieCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionRepository.swift; sourceTree = "<group>"; };
 		90BBB91229A1518500C0CBD6 /* CreditEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditEntity.swift; sourceTree = "<group>"; };
 		90BBB91529A151BF00C0CBD6 /* MovieCollectionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionEntity.swift; sourceTree = "<group>"; };
 		90BBB91829A151F100C0CBD6 /* MovieImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageEntity.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				A46A65FA299F7DC40013FE1C /* MoviesRepository.swift */,
 				90BBB91C29A153BD00C0CBD6 /* MovieDetailRepository.swift */,
+				90463E2C29A20D6900AB6728 /* MovieCollectionRepository.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				90BBB91D29A153BD00C0CBD6 /* MovieDetailRepository.swift in Sources */,
 				A46A65D0299F31030013FE1C /* String+Extension.swift in Sources */,
 				90BBB91329A1518500C0CBD6 /* CreditEntity.swift in Sources */,
+				90463E2D29A20D6900AB6728 /* MovieCollectionRepository.swift in Sources */,
 				90BBB91629A151BF00C0CBD6 /* MovieCollectionEntity.swift in Sources */,
 				A46A64A0299F27D00013FE1C /* Platform.docc in Sources */,
 				A46A65EC299F6A0A0013FE1C /* Dictionary+Extension.swift in Sources */,

@@ -59,6 +59,17 @@ class MovieDetailViewModel: BaseViewModel<MovieDetailViewModel.State> {
         self.navigator.pop()
     }
     
+    func goToCollection() {
+        if let collection = state.detail?.belongsToCollection {
+            self.navigator.goToCollection(collection: collection,
+                                          onSelect: { [weak self] movie in
+                guard let self = self else { return }
+                self.navigator.dismiss()
+                self.onChangeMovie(movie: movie)
+            })
+        }
+    }
+    
     func goToCheckout() {
         navigator.goToCheckout()
     }

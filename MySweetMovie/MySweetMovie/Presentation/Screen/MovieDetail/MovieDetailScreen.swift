@@ -252,6 +252,9 @@ extension MovieDetailScreen {
             }
             .frame(width: (width - 20).alwaysPositive, height: (width - 20).alwaysPositive * 9 / 16)
             .cornerRadius(8)
+            .onTapGesture {
+                viewModel.goToCollection()
+            }
         }
     }
     

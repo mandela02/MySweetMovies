@@ -9,11 +9,13 @@ import Foundation
 
 public struct MovieCollectionEntity: Codable {
     public let id: Int?
-    public let name, posterPath, backdropPath: String?
+    public let name, overview, posterPath, backdropPath: String?
+    public let parts: [MovieEntity]?
 
     public enum CodingKeys: String, CodingKey {
-        case id, name
+        case id, name, overview
         case posterPath = "poster_path"
         case backdropPath = "backdrop_path"
+        case parts
     }
 }

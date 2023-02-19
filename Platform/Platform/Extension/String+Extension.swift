@@ -20,4 +20,5 @@ extension String {
     static let discoverMovie = "/3/discover/movie"
     
     static let movieDetailPath = "/3/movie/%@"
+    static let movieCollectionPath = "/3/collection/%@"
 }

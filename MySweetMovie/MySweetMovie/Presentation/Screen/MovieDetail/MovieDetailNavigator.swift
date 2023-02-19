@@ -7,9 +7,11 @@
 
 import Foundation
 import UIKit
+import Domain
 
 protocol MovieDetailNavigatorProtocol: BaseNavigator {
     func goToCheckout()
+    func goToCollection(collection: MovieCollection, onSelect: @escaping (Movie) -> Void)
 }
 
 struct MovieDetailNavigator: MovieDetailNavigatorProtocol {
@@ -21,6 +23,16 @@ struct MovieDetailNavigator: MovieDetailNavigatorProtocol {
     
     func goToCheckout() {
         let viewController = BaseViewController(rootView: CheckOutView())
+        self.navigationController.present(viewController, animated: true)
+    }
+    
+    @MainActor
+    func goToCollection(collection: MovieCollection, onSelect: @escaping (Movie) -> Void) {
+        let getMovieCollectinoUseCase = Application.shared.userCaseProvider.getMovieCollectinoUseCase()
+        let viewModel = MovieCollectionViewModel(collection: collection,
+                                                 getMovieCollectinoUseCase: getMovieCollectinoUseCase)
+        let view = MovieCollectionScreen(viewModel: viewModel, onSelect: onSelect)
+        let viewController = BaseViewController(rootView: view)
         self.navigationController.present(viewController, animated: true)
     }
 }
