@@ -16,6 +16,7 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         var param = baseParam
         param["language"] = language
         param["page"] = "\(page)"
+        param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: .nowPlayingPath, param: param, needAuthToken: false)
         return try result.getData()
     }
@@ -24,6 +25,7 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         var param = baseParam
         param["language"] = language
         param["page"] = "\(page)"
+        param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: .upcommingPath, param: param, needAuthToken: false)
         return try result.getData()
     }
@@ -32,6 +34,7 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         var param = baseParam
         param["language"] = language
         param["page"] = "\(page)"
+        param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: .popularPath, param: param, needAuthToken: false)
         return try result.getData()
     }
@@ -40,6 +43,7 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         var param = baseParam
         param["language"] = language
         param["page"] = "\(page)"
+        param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: .topRatedPath, param: param, needAuthToken: false)
         return try result.getData()
     }
@@ -49,7 +53,8 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         param["language"] = language
         param["page"] = "\(page)"
         param["with_genres"] = "\(genre)"
-        param["sort_by"] = "popularity.desc"
+        param["sort_by"] = "release_date.desc"
+        param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: .discoverMoviePath, param: param, needAuthToken: false)
         return try result.getData()
     }
@@ -59,6 +64,7 @@ public class MoviesRepository: BaseRepository<MoviesEntity> {
         param["language"] = language
         param["page"] = "\(page)"
         param["query"] = "\(keyword)"
+        param["include_image_language"] = "\(language),null"
         let result = try await dataRepository.fetchItem(path: .searchMoviePath, param: param, needAuthToken: false)
         return try result.getData()
     }

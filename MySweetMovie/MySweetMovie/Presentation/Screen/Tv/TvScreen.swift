@@ -10,6 +10,8 @@ import SwiftUI
 
 struct TvScreen: View {
     var body: some View {
-        Color.green
+        Text("Placeholder")
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
     }
 }

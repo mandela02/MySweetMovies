@@ -118,7 +118,15 @@ extension MainTabBarViewController {
     
     private func buildDiscover() -> UINavigationController {
         let navigationController = UINavigationController()
-        let view = DiscoverScreen()
+        
+        let navigator = DiscoverNavigator(navigationController: navigationController)
+        
+        let getMoviesByGenreUseCase = Application.shared.userCaseProvider.getMoviesByGenreUseCase()
+        
+        let viewModel = DiscoverViewModel(navigator: navigator,
+                                          getMoviesByGenreUseCase: getMoviesByGenreUseCase)
+        
+        let view = DiscoverScreen(viewModel: viewModel)
         
         let viewController = BaseViewController(rootView: view)
         
