@@ -109,4 +109,5 @@ extension String {
     static var findOutMore: String { String(localizedKey: "findOutMore") }
     static var smimilar: String { String(localizedKey: "smimilar") }
     static var orderNow: String { String(localizedKey: "orderNow") }
+    static var searchMovie: String { String(localizedKey: "searchMovie") }
 }

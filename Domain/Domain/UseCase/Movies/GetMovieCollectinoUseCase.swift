@@ -10,9 +10,8 @@ import Platform
 
 public struct GetMovieCollectinoUseCase: InputOutputUseCaseProtocol {
     public typealias Output = GetMovieCollectinoOutput
-    public typealias Input = GetMovieCollectinoInput
     
-    public struct GetMovieCollectinoInput {
+    public struct Input {
         public init(language: String, collectionID: Int) {
             self.language = language
             self.collectionID = collectionID
@@ -33,7 +32,7 @@ public struct GetMovieCollectinoUseCase: InputOutputUseCaseProtocol {
 
     private let movieCollectionRepository: MovieCollectionRepository
 
-    public func run(input: GetMovieCollectinoInput) async throws -> GetMovieCollectinoOutput {
+    public func run(input: Input) async throws -> GetMovieCollectinoOutput {
         let result = try await movieCollectionRepository.getDetail(language: input.language, collectionID: input.collectionID)
         return Output(movie: result.parts?.map { $0.toModel } ?? [],
                       overview: result.overview ?? "")

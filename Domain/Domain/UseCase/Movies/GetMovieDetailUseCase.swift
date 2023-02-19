@@ -10,9 +10,8 @@ import Platform
 
 public struct GetMovieDetailUseCase: InputOutputUseCaseProtocol {
     public typealias Output = MovieDetail
-    public typealias Input = GetMovieDetailInput
     
-    public struct GetMovieDetailInput {
+    public struct Input {
         public init(language: String, movieID: Int) {
             self.language = language
             self.movieID = movieID
@@ -28,7 +27,7 @@ public struct GetMovieDetailUseCase: InputOutputUseCaseProtocol {
 
     private let movieDetailRepository: MovieDetailRepository
 
-    public func run(input: GetMovieDetailInput) async throws -> MovieDetail {
+    public func run(input: Input) async throws -> MovieDetail {
         let result = try await movieDetailRepository.getDetail(language: input.language, movieID: input.movieID)
         return result.toModel
     }

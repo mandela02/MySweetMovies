@@ -15,4 +15,5 @@ public protocol UseCaseProviderProtocol {
     func getMoviesByGenreUseCase() -> GetMoviesByGenreUseCase
     func getMovieDetailUseCase() -> GetMovieDetailUseCase
     func getMovieCollectinoUseCase() -> GetMovieCollectinoUseCase
+    func searchMovieUseCase() -> SearchMovieUseCase
 }

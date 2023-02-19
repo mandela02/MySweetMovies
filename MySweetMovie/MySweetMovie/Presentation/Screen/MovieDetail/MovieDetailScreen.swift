@@ -269,6 +269,7 @@ extension MovieDetailScreen {
 
             MoviesView(movies: viewModel.state.detail?.similars ?? [],
                        onTap: {
+                self.shouldShowNavigationBar = false
                 viewModel.onChangeMovie(movie: $0)
             })
         }
